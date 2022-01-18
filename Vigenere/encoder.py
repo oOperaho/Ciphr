@@ -7,8 +7,11 @@ res, w, letters = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
 
 if len(word) > len(key):
     nkey = len(word) - len(key)
-    w = key[:nkey]
-    res = key + w
+    if nkey < len(key):
+        w = key[:nkey]
+        res = key + w
+    elif nkey > len(key):
+        res = key * (nkey // 2)
 
 elif len(word) < len(key):
     nkey = len(key) - len(word)
@@ -17,6 +20,8 @@ elif len(word) < len(key):
 
 else:
     res += key
+
+print(res)
 
 s, l, fin, enc = [], [], [], []
 
