@@ -1,9 +1,9 @@
-from operator import add
+from operator import sub
 
-word = str(input("Type the word to be encrypted: ")).strip().lower().replace(" ", "")
+word = str(input("Type the word to be decrypted: ")).strip().lower().replace(" ", "")
 key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
 nkey = 0
-res, w, letters = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
+res, w, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyz", " zyxwvutsrqponmlkjihgfedcba"
 
 if len(word) > len(key):
     nkey = len(word) - len(key)
@@ -23,15 +23,19 @@ s, l, fin, enc = [], [], [], []
 for i in word:
     s.append(letters.find(i))
 
-for n in range(0, len(s)):
-    s[n] = s[n] - 1
-
 for j in res:
     l.append(letters.find(j))
 
-fin = list(map(add, s, l))
+for n in range(0, len(s)):
+    s[n] = s[n] + 1
+
+fin = list(map(sub, s, l))
 
 for x in fin:
-    enc.append(letters[x])
+    if x < 0:
+        x = abs(x) + 1
+        enc.append(srettel[x])
+    else:
+        enc.append(letters[x])
 
 print("".join(enc))
