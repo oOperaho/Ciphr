@@ -5,8 +5,6 @@ key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
 nkey = 0
 res, w, letters = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 
-print(word)
-
 if len(word) > len(key):
     nkey = len(word) - len(key)
     if nkey < len(key):
