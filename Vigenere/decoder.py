@@ -7,8 +7,16 @@ res, w, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyz", " zyxwvutsrqpo
 
 if len(word) > len(key):
     nkey = len(word) - len(key)
-    w = key[:nkey]
-    res = key + w
+    if nkey < len(key):
+        w = key[:nkey]
+        res = key + w
+    elif nkey > len(key):
+        if len(key) == 1:
+            res = key * (nkey + 1)
+        elif len(key) == 2:
+            res = key * (nkey // 2)
+    else:
+        res += key + key
 
 elif len(word) < len(key):
     nkey = len(key) - len(word)
