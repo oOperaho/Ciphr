@@ -3,7 +3,7 @@ from operator import sub
 word = str(input("Type the word to be decrypted: ")).strip().lower().replace(" ", "")
 key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
 nkey = 0
-res, w, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba"
+res, w, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz ", " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba "
 
 if len(word) > len(key):
     nkey = len(word) - len(key)
