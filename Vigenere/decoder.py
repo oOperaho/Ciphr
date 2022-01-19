@@ -26,8 +26,6 @@ elif len(word) < len(key):
 else:
     res += key
 
-print(res)
-
 s, l, fin, enc = [], [], [], []
 
 for i in word:
