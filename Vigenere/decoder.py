@@ -14,7 +14,7 @@ if len(word) > len(key):
         if len(key) == 1:
             res = key * (nkey + 1)
         elif len(key) == 2:
-            res = key * (nkey // 2)
+            res = key * nkey
     else:
         res += key + key
 
@@ -25,6 +25,8 @@ elif len(word) < len(key):
 
 else:
     res += key
+
+print(res)
 
 s, l, fin, enc = [], [], [], []
 
