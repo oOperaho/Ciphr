@@ -15,6 +15,6 @@ To put this in a python script, i had to think in a way to find the numeric expr
 You replace the letter with its numbers on the AIZ26 method (B = 2 and I = 9), and you have 11. Subtract 1 of this, and you got 10, or J, in the alphabet.  
 If you look  at the Grid, you'll see the same result. So:
 
-#### Encode = W + K - 1
+### Encode = W + K - 1
 
 You may note that this only works for some letters. If you add O with O, you'll have 30, which is greater than 26. To solve this, simply repeat the alphabet one time, and then you cann add even Z + Z, the result will exist.
