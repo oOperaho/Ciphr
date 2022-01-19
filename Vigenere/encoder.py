@@ -16,7 +16,7 @@ if len(word) > len(key):
         if len(key) == 1:
             res = key * (nkey + 1)
         elif len(key) == 2:
-            res = key * nkey
+            res = key * (nkey // 2)
     else:
         res += key + key
 
