@@ -5,13 +5,18 @@ key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
 nkey = 0
 res, w, letters = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 
+print(word)
+
 if len(word) > len(key):
     nkey = len(word) - len(key)
     if nkey < len(key):
         w = key[:nkey]
         res = key + w
     elif nkey > len(key):
-        res = key * (nkey // 2)
+        if len(key) == 1:
+            res = key * (nkey + 1)
+        elif len(key) == 2:
+            res = key * (nkey // 2)
     else:
         res += key + key
 
