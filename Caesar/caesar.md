@@ -6,7 +6,7 @@ this cipher does not have different ways of encoding/decoding, only one simple f
 For example, if you want to hide the word "orange", and you choose 3 as a key, you have to go through each letter of the word, adding 3 positions on the alphabet. So, the
 "O on "orange" will be replaced by "R". So:
 
-## Encode/Decode = W{Letter} + Key{Letter}
+## Encode/Decode = Word{Letter} + Key{Letter}
 
 In this case, the word "orange" is now "rudqjh".
 
