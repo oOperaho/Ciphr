@@ -1,13 +1,13 @@
 import sys
 
 from PyQt5.QtCore import *
-from PyQt5 import QtWidgets, Qt
+from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QSizePolicy
 
 
 class MainUi(QMainWindow):
     def __init__(self):
-        super(MainUi,self).__init__()
+        super(MainUi, self).__init__()
         self.setWindowTitle("Ciphr")
         self.setGeometry(500, 500, 450, 450)
         self.setStyleSheet("background-color: #052321;")
@@ -17,8 +17,9 @@ class MainUi(QMainWindow):
 
     def window(self):
         self.innic.setText("CIPHR")
-        self.innic.setStyleSheet("background-color: #ADD45A;")
-        self.innic.setSizePolicy(QSizePolicy.Expanding)
+        self.innic.setStyleSheet("color: #ADD45A;")
+        self.innic.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.innic.setGeometry(200, 200, 250, 250)
         self.innic.setAlignment(Qt.AlignCenter)
 
 
