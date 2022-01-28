@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5 import QtWidgets
+from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 
 
@@ -9,12 +10,15 @@ class MainUi(QMainWindow):
         super(MainUi, self).__init__()
         self.setWindowTitle("Ciphr")
         self.setGeometry(500, 500, 450, 450)
+        self.setStyleSheet("background-color: #052321;")
         self.innic = QtWidgets.QLabel(self)
         self.opc = QPushButton(self)
         self.window()
 
     def window(self):
         self.innic.setText("CIPHR")
+        self.innic.setStyleSheet("color: #ADD45A;")
+        self.innic.setFont(QFont("Helvetica", 15))
         self.innic.setGeometry(100, 90, 250, 15)
 
 
