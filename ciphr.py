@@ -1,8 +1,8 @@
 import sys
 
-from PyQt5.QtCore import *
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QSizePolicy
+from PyQt5.QtGui import QFont
+from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 
 
 class MainUi(QMainWindow):
@@ -18,9 +18,8 @@ class MainUi(QMainWindow):
     def window(self):
         self.innic.setText("CIPHR")
         self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        self.innic.setGeometry(200, 200, 250, 250)
-        self.innic.setAlignment(Qt.AlignCenter)
+        self.innic.setFont(QFont("Helvetica", 15))
+        self.innic.setGeometry(100, 90, 250, 15)
 
 
 def display():
