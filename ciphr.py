@@ -1,7 +1,8 @@
 import sys
 
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
+from PyQt5.QtCore import *
+from PyQt5 import QtWidgets, Qt
+from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QSizePolicy
 
 
 class MainUi(QMainWindow):
@@ -12,6 +13,13 @@ class MainUi(QMainWindow):
         self.setStyleSheet("background-color: #052321;")
         self.innic = QtWidgets.QLabel(self)
         self.opc = QPushButton(self)
+        self.window()
+
+    def window(self):
+        self.innic.setText("CIPHR")
+        self.innic.setStyleSheet("background-color: #ADD45A;")
+        self.innic.setSizePolicy(QSizePolicy.Expanding)
+        self.innic.setAlignment(Qt.AlignCenter)
 
 
 def display():
