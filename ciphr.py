@@ -18,8 +18,8 @@ class MainUi(QMainWindow):
     def window(self):
         self.innic.setText("CIPHR")
         self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setFont(QFont("Helvetica", 15))
-        self.innic.setGeometry(100, 90, 250, 15)
+        self.innic.setFont(QFont("Impact", 15))
+        self.innic.setGeometry(200, 90, 250, 20)
 
 
 def display():
