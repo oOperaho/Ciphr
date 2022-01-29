@@ -7,7 +7,9 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 class MainUi(QMainWindow):
     def __init__(self):
         super(MainUi, self).__init__()
+        self.url = "https://github.com/oOperaho/Ciphr"
         self.innic = QtWidgets.QLabel(self)
+        self.ciphr_repo = QPushButton(self)
         self.vig = QPushButton(self)
         self.cae = QPushButton(self)
         self.setWindowTitle("Ciphr")
@@ -31,6 +33,12 @@ class MainUi(QMainWindow):
         self.cae.setGeometry(227, 150, 70, 25)
         self.cae.setFont(QFont("Helvetica", 10))
         self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c""")
+
+        self.ciphr_repo.setText()
+
+    def open_repo(self):
+        import webbrowser
+        webbrowser.open_new(self.url)
 
 
 def display():
