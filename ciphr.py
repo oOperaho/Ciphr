@@ -25,12 +25,12 @@ class MainUi(QMainWindow):
         self.vig.setText("Vigenere")
         self.vig.setGeometry(227, 180, 70, 25)
         self.vig.setFont(QFont("Helvetica", 10))
-        self.vig.setStyleSheet("""background-color: #042c18; color: #ADD45A""")
+        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c""")
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(227, 150, 70, 25)
         self.cae.setFont(QFont("Helvetica", 10))
-        self.cae.setStyleSheet("""background-color: #042c18; color: #acbf4d""")
+        self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c""")
 
 
 def display():
