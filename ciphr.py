@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QSize
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
@@ -35,6 +35,7 @@ class MainUi(QMainWindow):
         self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
         self.ciphr_repo.setIcon(QIcon('GH.png'))
+        self.ciphr_repo.setIconSize(QSize(25, 25))
         self.ciphr_repo.setGeometry(10, 10, 12, 12)
         self.ciphr_repo.setStyleSheet("""background-color: white; border: 2px solid black;""")
 
