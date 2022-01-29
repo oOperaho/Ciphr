@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 
 
@@ -27,14 +27,16 @@ class MainUi(QMainWindow):
         self.vig.setText("Vigenere")
         self.vig.setGeometry(227, 180, 70, 25)
         self.vig.setFont(QFont("Helvetica", 10))
-        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c""")
+        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(227, 150, 70, 25)
         self.cae.setFont(QFont("Helvetica", 10))
-        self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c""")
+        self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
-        self.ciphr_repo.setText()
+        self.ciphr_repo.setIcon(QIcon('GH.png'))
+        self.ciphr_repo.setGeometry(10, 10, 12, 12)
+        self.ciphr_repo.setStyleSheet("""background-color: white; border: 2px solid black;""")
 
     def open_repo(self):
         import webbrowser
