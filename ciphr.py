@@ -11,18 +11,21 @@ class MainUi(QMainWindow):
         self.setWindowTitle("Ciphr")
         self.setGeometry(500, 500, 450, 450)
         self.setStyleSheet("background-color: #052321;")
-        self.innic = QtWidgets.QHBoxLayout(self)
-        self.innic.setContentsMargins(100, 100, 100, 100)
-        self.innic.setSpacing(90)
-        self.inn = QtWidgets.QLabel()
+        self.vig = QtWidgets.QPushButton()
+        self.innic = QtWidgets.QLabel(self)
         self.opc = QPushButton(self)
         self.window()
 
     def window(self):
-        self.inn.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
-        self.inn.setText("CIPHR")
-        self.inn.setStyleSheet("color: #ADD45A;")
-        self.inn.setFont(QFont("Impact", 25))
+        self.innic.setText("CIPHR")
+        self.innic.setStyleSheet("color: #ADD45A;")
+        self.innic.setFont(QFont("Impact", 25))
+        self.innic.setGeometry(175, 100, 100, 30)
+
+    def vigenere_button(self):
+        self.vig.setText("Vigenere")
+        self.vig.setStyleSheet("color: #ADD45A;")
+        self.vig.setGeometry(100, 100, 100, 100)
 
 
 def display():
