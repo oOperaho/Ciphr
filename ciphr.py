@@ -6,12 +6,12 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 class MainUi(QMainWindow):
     def __init__(self):
         super(MainUi, self).__init__()
+        self.innic = QtWidgets.QLabel(self)
+        self.vig = QPushButton(self)
+        self.opc = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setGeometry(500, 500, 450, 450)
         self.setStyleSheet("background-color: #052321;")
-        self.vig = QPushButton(self)
-        self.innic = QtWidgets.QLabel(self)
-        self.opc = QPushButton(self)
         self.window()
 
     def window(self):
@@ -22,8 +22,8 @@ class MainUi(QMainWindow):
 
     def vigenere_button(self):
         self.vig.setText("Vigenere")
-        self.vig.setStyleSheet("background-color: #052321; color: #ADD45A")
         self.vig.setGeometry(170, 100, 100, 10)
+        self.vig.setStyleSheet("background-color: #052321; color: #ADD45A")
 
 
 def display():
