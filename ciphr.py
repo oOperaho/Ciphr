@@ -1,3 +1,4 @@
+from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
@@ -8,22 +9,28 @@ class MainUi(QMainWindow):
         super(MainUi, self).__init__()
         self.innic = QtWidgets.QLabel(self)
         self.vig = QPushButton(self)
-        self.opc = QPushButton(self)
+        self.cae = QPushButton(self)
         self.setWindowTitle("Ciphr")
-        self.setGeometry(500, 500, 450, 450)
+        self.setGeometry(100, 100, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.window()
 
     def window(self):
         self.innic.setText("CIPHR")
         self.innic.setStyleSheet("color: #ADD45A;")
+        self.innic.setGeometry(163, 40, 200, 100)
         self.innic.setFont(QFont("Impact", 25))
-        self.innic.setGeometry(180, 100, 100, 30)
+        self.innic.setAlignment(Qt.AlignCenter)
 
-    def vigenere_button(self):
         self.vig.setText("Vigenere")
-        self.vig.setGeometry(170, 100, 100, 10)
-        self.vig.setStyleSheet("background-color: #052321; color: #ADD45A")
+        self.vig.setGeometry(227, 180, 70, 25)
+        self.vig.setFont(QFont("Helvetica", 10))
+        self.vig.setStyleSheet("""background-color: #042c18; color: #ADD45A""")
+
+        self.cae.setText("Caesar")
+        self.cae.setGeometry(227, 150, 70, 25)
+        self.cae.setFont(QFont("Helvetica", 10))
+        self.cae.setStyleSheet("""background-color: #042c18; color: #acbf4d""")
 
 
 def display():
