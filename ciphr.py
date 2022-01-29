@@ -12,17 +12,17 @@ class MainUi(QMainWindow):
         self.setGeometry(500, 500, 450, 450)
         self.setStyleSheet("background-color: #052321;")
         self.innic = QtWidgets.QHBoxLayout(self)
-        self.innic.setContentsMargins(10, 10, 10, 10)
-        self.innic.setSpacing(10)
-        self.innic.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        self.innic.setContentsMargins(100, 100, 100, 100)
+        self.innic.setSpacing(90)
+        self.inn = QtWidgets.QLabel()
         self.opc = QPushButton(self)
         self.window()
 
     def window(self):
-        self.innic.setText("CIPHR")
-        self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setFont(QFont("Impact", 25))
-
+        self.inn.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        self.inn.setText("CIPHR")
+        self.inn.setStyleSheet("color: #ADD45A;")
+        self.inn.setFont(QFont("Impact", 25))
 
 
 def display():
