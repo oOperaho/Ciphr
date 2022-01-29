@@ -1,5 +1,3 @@
-
-
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
@@ -20,7 +18,7 @@ class MainUi(QMainWindow):
         self.innic.setText("CIPHR")
         self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setFont(QFont("Impact", 25))
-        self.innic.setGeometry(175, 100, 100, 30)
+        self.innic.setGeometry(180, 100, 100, 30)
 
     def vigenere_button(self):
         self.vig.setText("Vigenere")
