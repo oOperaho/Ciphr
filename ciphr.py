@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QFont, QRegion
-from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
+from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QToolButton
 
 
 class MainUi(QMainWindow):
@@ -9,7 +9,7 @@ class MainUi(QMainWindow):
         super(MainUi, self).__init__()
         self.url = "https://github.com/oOperaho/Ciphr"
         self.innic = QtWidgets.QLabel(self)
-        self.ciphr_repo = QPushButton(self)
+        self.ciphr_repo = QToolButton(self)
         self.vig = QPushButton(self)
         self.cae = QPushButton(self)
         self.setWindowTitle("Ciphr")
@@ -37,6 +37,7 @@ class MainUi(QMainWindow):
         self.ciphr_repo.setGeometry(10, 10, 12, 12)
         self.ciphr_repo.setStyleSheet("""background-color: white; border: 2px solid black; background-image: url(GH.png);""")
         self.ciphr_repo.setMask(QRegion(self.rect(), QRegion.Ellipse))
+        self.ciphr_repo.resizeEvent(self)
 
     def open_repo(self):
         import webbrowser
