@@ -36,7 +36,7 @@ class MainUi(QMainWindow):
         self.vig.setFont(QFont("Helvetica", 15))
         self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
 
-        self.ciphr_repo.setGeometry(10, 10, 20, 20)
+        self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""background-color: #ADD45A; border: 1px solid black; border-radius: 5; 
                                         background-image: url(icons/gh.png);""")
         self.ciphr_repo.clicked.connect(self.open_repo)
