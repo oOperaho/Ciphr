@@ -98,8 +98,8 @@ def display():
     import sys
     w = QApplication(sys.argv)
     w.setStyle("Breeze")
-    ui = MainUi()
-    ui.show()
+    ui = Remote()
+    ui.main_window()
     sys.exit(w.exec_())
 
 
