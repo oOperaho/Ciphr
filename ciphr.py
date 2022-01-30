@@ -34,10 +34,10 @@ class MainUi(QMainWindow):
         self.cae.setFont(QFont("Helvetica", 10))
         self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
-        self.ciphr_repo.setGeometry(10, 10, 12, 12)
+        self.ciphr_repo.setGeometry(10, 10, 120, 120)
         self.ciphr_repo.setStyleSheet("""background-color: white; border: 2px solid black; background-image: url(GH.png);""")
         self.ciphr_repo.setMask(QRegion(self.rect(), QRegion.Ellipse))
-        self.ciphr_repo.resizeEvent()
+
 
     def open_repo(self):
         import webbrowser
