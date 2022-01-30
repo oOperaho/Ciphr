@@ -18,19 +18,19 @@ class MainUi(QMainWindow):
         self.window()
 
     def window(self):
-        self.innic.setText("CIPHR")
+        self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setGeometry(163, 40, 200, 100)
+        self.innic.setGeometry(163, 40, 190, 100)
         self.innic.setFont(QFont("Impact", 25))
         self.innic.setAlignment(Qt.AlignCenter)
 
         self.vig.setText("Vigenere")
-        self.vig.setGeometry(227, 180, 70, 25)
+        self.vig.setGeometry(227, 180, 60, 25)
         self.vig.setFont(QFont("Helvetica", 10))
         self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
 
         self.cae.setText("Caesar")
-        self.cae.setGeometry(227, 150, 70, 25)
+        self.cae.setGeometry(227, 150, 60, 25)
         self.cae.setFont(QFont("Helvetica", 10))
         self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
