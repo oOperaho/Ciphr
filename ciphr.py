@@ -1,10 +1,12 @@
 from PyQt5.QtCore import Qt
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
+from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QWidget
 
 
 class MainUi(QMainWindow):
+    switch_tabs = QtCore.pyqtSignal(str)
+
     def __init__(self):
         super(MainUi, self).__init__()
         self.url = "https://github.com/oOperaho/Ciphr"
@@ -62,6 +64,30 @@ class MainUi(QMainWindow):
     def open_repo(self):
         import webbrowser
         webbrowser.open_new(self.url)
+
+
+class CaesarTab(QWidget):
+    def __init__(self):
+        super(CaesarTab, self).__init__()
+        self.setWindowTitle("Ciphr")
+        self.setWindowIcon(QIcon("icons/cr.png"))
+        self.setGeometry(500, 250, 520, 400)
+        self.setStyleSheet("background-color: #052321;")
+
+
+class Remote:
+    def __init__(self):
+        pass
+
+    def main_window(self):
+        self.mwindow = MainUi()
+        self.mwindow.switch_tabs.connect(self.caesar_tab)
+        self.mwindow.show()
+
+    def caesar_tab(self):
+        self.cae_tab = CaesarTab()
+        self.mwindow.close()
+        self.cae_tab.show()
 
 
 def display():
