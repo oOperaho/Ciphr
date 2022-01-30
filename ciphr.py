@@ -29,7 +29,15 @@ class MainUi(QMainWindow):
         self.cae.setText("Caesar")
         self.cae.setGeometry(665, 230, 100, 40)
         self.cae.setFont(QFont("Helvetica", 15))
-        self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.cae.setStyleSheet("""QPushButton {
+                            background-color: #042c18; 
+                            color: #dbf45c; 
+                            border: 2px solid black;
+                            }
+                            QPushButton::hover {
+                            background-color: #8ac431;
+                            color: black;
+                            }""")
 
         self.vig.setText("Vigenere")
         self.vig.setGeometry(665, 280, 100, 40)
