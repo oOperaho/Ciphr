@@ -1,4 +1,5 @@
-# Ciphr ![cr](https://user-images.githubusercontent.com/61850743/151684672-9c71e4a9-7a9c-4b3b-b2f3-f993aa4156e4.png)
+# Ciphr ![cr](https://user-images.githubusercontent.com/61850743/151684684-83fdaa65-e769-4f40-94e4-fb1f7e6e08ff.png)
+
 
 
 I made this in order to study and solve some encryptions, trying to create a encoder and a decoder to each cipher. Inside of the crypto folders, i'll put some explanation about the logic behind the code. My goal is to recreate some of these ciphers, _without googling_.
