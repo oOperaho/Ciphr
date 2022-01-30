@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow
 
 
@@ -13,7 +13,8 @@ class MainUi(QMainWindow):
         self.vig = QPushButton(self)
         self.cae = QPushButton(self)
         self.setWindowTitle("Ciphr")
-        self.setGeometry(100, 100, 520, 400)
+        self.setWindowIcon(QIcon("icons/cr.png"))
+        self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.window()
 
@@ -47,7 +48,7 @@ class MainUi(QMainWindow):
 def display():
     import sys
     w = QApplication(sys.argv)
-    w.setStyle("Oxygen")
+    w.setStyle("Breeze")
     ui = MainUi()
     ui.show()
     sys.exit(w.exec_())
