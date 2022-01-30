@@ -16,24 +16,25 @@ class MainUi(QMainWindow):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
+        self.showMaximized()
         self.window()
 
     def window(self):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setGeometry(163, 40, 190, 100)
-        self.innic.setFont(QFont("Impact", 25))
+        self.innic.setGeometry(620, 120, 190, 100)
+        self.innic.setFont(QFont("Impact", 35))
         self.innic.setAlignment(Qt.AlignCenter)
 
-        self.vig.setText("Vigenere")
-        self.vig.setGeometry(227, 180, 60, 25)
-        self.vig.setFont(QFont("Helvetica", 10))
-        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
-
         self.cae.setText("Caesar")
-        self.cae.setGeometry(227, 150, 60, 25)
-        self.cae.setFont(QFont("Helvetica", 10))
+        self.cae.setGeometry(665, 230, 100, 40)
+        self.cae.setFont(QFont("Helvetica", 15))
         self.cae.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+
+        self.vig.setText("Vigenere")
+        self.vig.setGeometry(665, 280, 100, 40)
+        self.vig.setFont(QFont("Helvetica", 15))
+        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
 
         self.ciphr_repo.setGeometry(10, 10, 20, 20)
         self.ciphr_repo.setStyleSheet("""background-color: #ADD45A; border: 1px solid black; border-radius: 5; 
