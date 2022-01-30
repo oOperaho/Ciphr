@@ -37,6 +37,7 @@ class MainUi(QMainWindow):
                             QPushButton::hover {
                             background-color: #8ac431;
                             color: black;
+                            border: 4px solid black;
                             }""")
 
         self.vig.setText("Vigenere")
@@ -50,6 +51,7 @@ class MainUi(QMainWindow):
                                 QPushButton::hover {
                                 background-color: #8ac431;
                                 color: black;
+                                border: 4px solid black;
                                 }""")
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
