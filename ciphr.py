@@ -34,7 +34,15 @@ class MainUi(QMainWindow):
         self.vig.setText("Vigenere")
         self.vig.setGeometry(665, 280, 100, 40)
         self.vig.setFont(QFont("Helvetica", 15))
-        self.vig.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black""")
+        self.vig.setStyleSheet("""QPushButton {
+                                background-color: #042c18;
+                                border: 2px solid black;
+                                color: #dbf45c;
+                                }
+                                QPushButton::hover {
+                                background-color: #8ac431;
+                                color: black;
+                                }""")
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""background-color: #ADD45A; border: 1px solid black; border-radius: 5; 
