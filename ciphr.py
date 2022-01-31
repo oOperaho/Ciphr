@@ -1,8 +1,13 @@
+import re
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
 
+def process_text(text):
+    new_text = re.sub("[^A-Za-z\s]", "", text)
+
+    return new_text
 
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
@@ -19,9 +24,9 @@ class MainUi(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
-        self.manu()
+        self.menu()
 
-    def manu(self):
+    def menu(self):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setGeometry(620, 120, 190, 100)
@@ -96,9 +101,9 @@ class CaesarTab(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
-        self.vigenere_window()
+        self.caesar_window()
 
-    def vigenere_window(self):
+    def caesar_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
@@ -161,12 +166,17 @@ class CaesarTab(QWidget):
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
+        print(word)
+        word = process_text(word)
+
         key = self.caesarkey.text()
         self.result.setText(caesarencoder(word, int(key)))
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
         word = self.caesarinput.text()
+        word = process_text(word)
+
         key = self.caesarkey.text()
         self.result.setText(caesardecoder(word, int(key)))
 
