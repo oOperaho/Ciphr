@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
 
 
 class MainUi(QWidget):
@@ -87,6 +87,7 @@ class CaesarTab(QWidget):
         QWidget.__init__(self)
         self.backbutton = QPushButton(self)
         self.cryptbutton = QPushButton(self)
+        self.caesarinput = QLineEdit(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
@@ -122,6 +123,8 @@ class CaesarTab(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
+
+        self.caesarinput.setGeometry(655, 260, 120, 30)
 
     def menu_toggle(self):
         self.switch_tabs.emit()
