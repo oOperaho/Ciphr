@@ -88,6 +88,7 @@ class CaesarTab(QWidget):
         self.backbutton = QPushButton(self)
         self.cryptbutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
+        self.caesarkey = QLineEdit(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
@@ -110,6 +111,14 @@ class CaesarTab(QWidget):
                                         }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+        self.caesarinput.setText("word")
+        self.caesarinput.setGeometry(655, 290, 120, 30)
+        self.caesarinput.setFont(QFont("Arial", 10))
+        self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+
+        self.caesarkey.setText("0")
+        self.caesarkey.setGeometry(655, 280, 50, 30)
+
         self.cryptbutton.setText("Encode/Decode")
         self.cryptbutton.setGeometry(640, 340, 150, 40)
         self.cryptbutton.setFont(QFont("Helvetica", 12))
@@ -123,11 +132,6 @@ class CaesarTab(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
-
-        self.caesarinput.setText("word")
-        self.caesarinput.setGeometry(655, 290, 120, 30)
-        self.caesarinput.setFont(QFont("Arial", 10))
-        self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
     def menu_toggle(self):
         self.switch_tabs.emit()
