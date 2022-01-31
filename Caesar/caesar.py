@@ -16,7 +16,7 @@ def caesardecoder(w, k):
         alphabet, out, l = " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba", "", []
 
         for letter in w.lower():
-            out = alphabet.index(letter) - k
+            out = alphabet.index(letter) + k
             l.append(alphabet[out])
 
         return "".join(l)
