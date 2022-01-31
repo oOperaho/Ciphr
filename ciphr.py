@@ -90,6 +90,7 @@ class CaesarTab(QWidget):
         self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
+        self.stringVld = QStrValidator(self)
         self.numberVld = QIntValidator(self)
         self.caesarkey.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
@@ -98,9 +99,9 @@ class CaesarTab(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
-        self.vigenere_window()
+        self.caesar_window()
 
-    def vigenere_window(self):
+    def caesar_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
