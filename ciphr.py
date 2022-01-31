@@ -126,6 +126,7 @@ class CaesarTab(QWidget):
 
         self.caesarinput.setGeometry(655, 290, 120, 30)
         self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.caesarinput.setFont(QFont("Arial", 10))
 
     def menu_toggle(self):
         self.switch_tabs.emit()
