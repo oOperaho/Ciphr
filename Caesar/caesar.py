@@ -8,4 +8,3 @@ def caesarciphr(w, k):
         l.append(alphabet[out])
 
     return "".join(l)
-
