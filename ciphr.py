@@ -89,6 +89,7 @@ class CaesarTab(QWidget):
         self.cryptbutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
+        self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
@@ -136,11 +137,16 @@ class CaesarTab(QWidget):
                                         }""")
         self.cryptbutton.clicked.connect(self.execcaesar)
 
+        self.result.setText("")
+        self.result.setGeometry(640, 390, 150, 40)
+        self.result.setFont(QFont("Helvetica", 15))
+
     def execcaesar(self):
         from Caesar import caesar
         word = self.caesarinput.text()
         key = self.caesarkey.text()
         out = caesar.caesarciphr(word, key)
+        self.result.setText(out)
 
     def menu_toggle(self):
         self.switch_tabs.emit()
