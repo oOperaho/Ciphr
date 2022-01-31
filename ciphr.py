@@ -71,6 +71,8 @@ class MainUi(QMainWindow):
 
 
 class CaesarTab(QWidget):
+    switch_tabs = QtCore.pyqtSignal(str)
+
     def __init__(self):
         super(CaesarTab, self).__init__()
         self.setWindowTitle("Ciphr")
@@ -78,18 +80,20 @@ class CaesarTab(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
 
+    def menu_toggle(self):
+        self.switch_tabs.emit()
+
 
 class Remote:
     def __init__(self):
-        pass
+        self.cae_tab = CaesarTab()
+        self.mwindow = MainUi()
 
     def main_window(self):
-        self.mwindow = MainUi()
         self.mwindow.switch_tabs.connect(self.caesar_tab)
         self.mwindow.show()
 
     def caesar_tab(self):
-        self.cae_tab = CaesarTab()
         self.mwindow.close()
         self.cae_tab.show()
 
