@@ -48,8 +48,8 @@ class MainUi(QWidget):
         self.vig.setFont(QFont("Helvetica", 15))
         self.vig.setStyleSheet("""QPushButton {
                                 background-color: #042c18;
-                                border: 2px solid black;
                                 color: #dbf45c;
+                                border: 2px solid black;
                                 }
                                 QPushButton::hover {
                                 background-color: #8ac431;
@@ -81,9 +81,21 @@ class CaesarTab(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
+        self.vigenere_window()
 
     def vigenere_window(self):
-        self.backbutton.switch_tabs.connect(self.menu_toggle)
+        self.backbutton.setText("←")
+        self.backbutton.setStyleSheet("""QPushButton {
+                                        background-color: #042c18;
+                                        color: #dbf45c;
+                                        border: 2px solid black;
+                                        }
+                                        QPushButton::hover {
+                                        background-color: #8ac431;
+                                        color: black;
+                                        border: 3px solid black;
+                                        }""")
+        self.backbutton.clicked.connect(self.menu_toggle)
 
     def menu_toggle(self):
         self.switch_tabs.emit()
