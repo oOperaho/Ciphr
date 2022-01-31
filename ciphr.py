@@ -19,6 +19,7 @@ class MainUi(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
+        self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
         self.menu()
 
     def menu(self):
