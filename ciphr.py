@@ -95,11 +95,11 @@ class CaesarTab(QWidget):
 
     def vigenere_window(self):
         self.backbutton.setText("←")
-        self.backbutton.setGeometry(10, 10, 40, 30)
+        self.backbutton.setGeometry(10, 10, 60, 35)
+        self.backbutton.setFont(QFont("Helvetica", 15))
         self.backbutton.setStyleSheet("""QPushButton {
-                                        background-color: #042c18;
-                                        color: #dbf45c;
-                                        border: 2px solid black;
+                                        background-color: #052321;
+                                        color: #70ff03;
                                         }
                                         QPushButton::hover {
                                         background-color: #8ac431;
