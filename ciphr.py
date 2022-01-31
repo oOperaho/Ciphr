@@ -90,7 +90,6 @@ class CaesarTab(QWidget):
         self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
-        self.stringVld = QStrValidator(self)
         self.numberVld = QIntValidator(self)
         self.caesarkey.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
