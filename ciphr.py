@@ -146,7 +146,7 @@ class CaesarTab(QWidget):
         from Caesar.caesar import caesarciphr
         word = self.caesarinput.text()
         key = self.caesarkey.text()
-        self.result.setText(caesarciphr(word, key))
+        self.result.setText("    " + caesarciphr(word, key))
 
     def menu_toggle(self):
         self.switch_tabs.emit()
