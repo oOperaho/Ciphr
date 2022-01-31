@@ -1,8 +1,13 @@
+import re
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
 
+def process_text(text):
+    new_text = re.sub("[^A-Za-z\s]", "", text)
+
+    return new_text
 
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
@@ -164,12 +169,17 @@ class CaesarTab(QWidget):
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
+        print(word)
+        word = process_text(word)
+
         key = self.caesarkey.text()
         self.result.setText(caesarencoder(word, int(key)))
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
         word = self.caesarinput.text()
+        word = process_text(word)
+
         key = self.caesarkey.text()
         self.result.setText(caesardecoder(word, int(key)))
 
