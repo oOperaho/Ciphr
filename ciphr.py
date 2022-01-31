@@ -134,6 +134,12 @@ class CaesarTab(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
+        self.cryptbutton.clicked.connect(self.execcaesar)
+
+    def execcaesar(self):
+        word = self.caesarinput.text()
+        key = self.caesarkey.text()
+
 
     def menu_toggle(self):
         self.switch_tabs.emit()
