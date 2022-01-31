@@ -114,8 +114,8 @@ class CaesarTab(QWidget):
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setStyleSheet("""background-color: #042c18;""")
-        self.result.setFont(QFont("Helvetica", 15))
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c;""")
+        self.result.setFont(QFont("Helvetica", 12))
 
         self.caesarkey.setText("3")
         self.caesarkey.setGeometry(685, 320, 50, 30)
@@ -146,7 +146,7 @@ class CaesarTab(QWidget):
         from Caesar.caesar import caesarciphr
         word = self.caesarinput.text()
         key = self.caesarkey.text()
-        self.result.setText("        " + caesarciphr(word, int(key)))
+        self.result.setText(caesarciphr(word, int(key)))
 
     def menu_toggle(self):
         self.switch_tabs.emit()
