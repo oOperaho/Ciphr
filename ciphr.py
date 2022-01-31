@@ -189,9 +189,7 @@ class CaesarTab(QWidget):
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
-        print(word)
         word = process_text(word)
-
         key = self.caesarkey.text()
         self.result.setText(caesarencoder(word, int(key)))
 
@@ -199,7 +197,6 @@ class CaesarTab(QWidget):
         from Caesar.caesar import caesardecoder
         word = self.caesarinput.text()
         word = process_text(word)
-
         key = self.caesarkey.text()
         self.result.setText(caesardecoder(word, int(key)))
 
