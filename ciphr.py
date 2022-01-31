@@ -86,7 +86,8 @@ class CaesarTab(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.backbutton = QPushButton(self)
-        self.cryptbutton = QPushButton(self)
+        self.encodebutton = QPushButton(self)
+        self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
         self.result = QtWidgets.QLabel(self)
@@ -127,10 +128,10 @@ class CaesarTab(QWidget):
         self.caesarinput.setFont(QFont("Arial", 10))
         self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
-        self.cryptbutton.setText("Encode/Decode")
-        self.cryptbutton.setGeometry(640, 360, 150, 40)
-        self.cryptbutton.setFont(QFont("Helvetica", 12))
-        self.cryptbutton.setStyleSheet("""QPushButton {
+        self.encodebutton.setText("Encode")
+        self.encodebutton.setGeometry(640, 360, 150, 40)
+        self.encodebutton.setFont(QFont("Helvetica", 12))
+        self.encodebutton.setStyleSheet("""QPushButton {
                                         background-color: #042c18;
                                         color: #dbf45c;
                                         border: 2px solid black;
@@ -140,13 +141,21 @@ class CaesarTab(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
-        self.cryptbutton.clicked.connect(self.execcaesar)
+        self.encodebutton.clicked.connect(self.encodecaesar)
 
-    def execcaesar(self):
+        self.decodebutton.setText("Decode")
+
+    def encodecaesar(self):
         from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
         key = self.caesarkey.text()
         self.result.setText(caesarencoder(word, int(key)))
+
+    def decodecaesar(self):
+        from Caesar.caesar import caesardecoder
+        word = self.caesarinput.text()
+        key = self.caesarkey.text()
+        self.result.setText(caesardecoder(word, int(key)))
 
     def menu_toggle(self):
         self.switch_tabs.emit()
