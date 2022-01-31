@@ -156,6 +156,7 @@ class CaesarTab(QWidget):
                                                 color: black;
                                                 border: 4px solid black;
                                                 }""")
+        self.decodebutton.clicked.connect(self.decodecaesar)
 
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
