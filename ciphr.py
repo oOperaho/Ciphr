@@ -1,6 +1,6 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QFont, QIcon
+from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
 
 
@@ -90,6 +90,8 @@ class CaesarTab(QWidget):
         self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
+        self.numberVld = QIntValidator(self)
+        self.caesarkey.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
