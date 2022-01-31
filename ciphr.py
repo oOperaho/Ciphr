@@ -113,7 +113,8 @@ class CaesarTab(QWidget):
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
-        self.result.setGeometry(640, 390, 150, 40)
+        self.result.setGeometry(640, 410, 150, 20)
+        self.result.setStyleSheet("""background-color: #042c18;""")
         self.result.setFont(QFont("Helvetica", 15))
 
         self.caesarkey.setText("3")
