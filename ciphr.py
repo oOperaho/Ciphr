@@ -32,15 +32,15 @@ class MainUi(QWidget):
         self.cae.setGeometry(665, 230, 100, 40)
         self.cae.setFont(QFont("Helvetica", 15))
         self.cae.setStyleSheet("""QPushButton {
-                            background-color: #042c18; 
-                            color: #dbf45c; 
-                            border: 2px solid black;
-                            }
-                            QPushButton::hover {
-                            background-color: #8ac431;
-                            color: black;
-                            border: 4px solid black;
-                            }""")
+                                background-color: #042c18; 
+                                color: #dbf45c; 
+                                border: 2px solid black;
+                                }
+                                QPushButton::hover {
+                                background-color: #8ac431;
+                                color: black;
+                                border: 4px solid black;
+                                }""")
         self.cae.clicked.connect(self.caesar_toggle)
 
         self.vig.setText("Vigenere")
@@ -86,6 +86,7 @@ class CaesarTab(QWidget):
     def __init__(self):
         QWidget.__init__(self)
         self.backbutton = QPushButton(self)
+        self.cryptbutton = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
