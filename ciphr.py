@@ -4,10 +4,11 @@ from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
 
+
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
-
     return new_text
+
 
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
