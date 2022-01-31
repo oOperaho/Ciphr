@@ -23,7 +23,7 @@ def caesardecoder(w, k):
     try:
         alphabet, out, l = " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba", "", []
 
-        for letter in w.lower():
+        for letter in reformat(w):
             out = alphabet.index(letter) + k
             l.append(alphabet[out])
 
