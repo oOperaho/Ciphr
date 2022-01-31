@@ -96,6 +96,7 @@ class Remote:
 
     def main_window(self):
         self.mwindow.switch_tabs.connect(self.caesar_tab)
+        self.cae_tab.close()
         self.mwindow.show()
 
     def caesar_tab(self):
