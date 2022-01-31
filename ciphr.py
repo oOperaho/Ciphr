@@ -85,6 +85,7 @@ class CaesarTab(QWidget):
 
     def vigenere_window(self):
         self.backbutton.setText("←")
+        self.backbutton.setGeometry(10, 10, 40, 30)
         self.backbutton.setStyleSheet("""QPushButton {
                                         background-color: #042c18;
                                         color: #dbf45c;
