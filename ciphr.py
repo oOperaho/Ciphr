@@ -19,9 +19,9 @@ class MainUi(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
-        self.window()
+        self.manu()
 
-    def window(self):
+    def manu(self):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setGeometry(620, 120, 190, 100)
@@ -80,8 +80,10 @@ class CaesarTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
+        self.showMaximized()
 
-        self.switch_tabs.connect(self.menu_toggle)
+    def vigenere_window(self):
+        self.backbutton.switch_tabs.connect(self.menu_toggle)
 
     def menu_toggle(self):
         self.switch_tabs.emit()
