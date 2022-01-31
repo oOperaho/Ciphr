@@ -1,8 +1,16 @@
+import re
+
+
+def reformat(txt):
+    ntxt = re.sub("[^a-zA-Z]", "", txt)
+    return ntxt
+
+
 def caesarencoder(w, k):
     try:
         alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
 
-        for letter in w.lower():
+        for letter in reformat(w):
             out = alphabet.index(letter) + k
             l.append(alphabet[out])
 
