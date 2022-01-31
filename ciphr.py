@@ -109,6 +109,20 @@ class CaesarTab(QWidget):
                                         }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+        self.cryptbutton.setText("Encode/Decode")
+        self.cryptbutton.setGeometry(640, 340, 150, 40)
+        self.cryptbutton.setFont(QFont("Helvetica", 12))
+        self.cryptbutton.setStyleSheet("""QPushButton {
+                                        background-color: #042c18;
+                                        color: #dbf45c;
+                                        border: 2px solid black;
+                                        }
+                                        QPushButton::hover {
+                                        background-color: #8ac431;
+                                        color: black;
+                                        border: 4px solid black;
+                                        }""")
+
     def menu_toggle(self):
         self.switch_tabs.emit()
 
