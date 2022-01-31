@@ -5,10 +5,10 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
 
 
 class MainUi(QWidget):
-    switch_tabs = QtCore.pyqtSignal(str)
+    switch_tabs = QtCore.pyqtSignal()
 
     def __init__(self):
-        super(MainUi, self).__init__()
+        QWidget.__init__(self)
         self.url = "https://github.com/oOperaho/Ciphr"
         self.innic = QtWidgets.QLabel(self)
         self.ciphr_repo = QPushButton(self)
@@ -71,14 +71,17 @@ class MainUi(QWidget):
 
 
 class CaesarTab(QWidget):
-    switch_tabs = QtCore.pyqtSignal(str)
+    switch_tabs = QtCore.pyqtSignal()
 
     def __init__(self):
-        super(CaesarTab, self).__init__()
+        QWidget.__init__(self)
+        self.backbutton = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
+
+        self.switch_tabs.connect(self.menu_toggle)
 
     def menu_toggle(self):
         self.switch_tabs.emit()
