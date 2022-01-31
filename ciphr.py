@@ -124,7 +124,8 @@ class CaesarTab(QWidget):
                                         border: 4px solid black;
                                         }""")
 
-        self.caesarinput.setGeometry(655, 260, 120, 30)
+        self.caesarinput.setGeometry(655, 290, 120, 30)
+        self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
     def menu_toggle(self):
         self.switch_tabs.emit()
