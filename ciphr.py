@@ -143,10 +143,10 @@ class CaesarTab(QWidget):
         self.cryptbutton.clicked.connect(self.execcaesar)
 
     def execcaesar(self):
-        from Caesar.caesar import caesarciphr
+        from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
         key = self.caesarkey.text()
-        self.result.setText(caesarciphr(word, int(key)))
+        self.result.setText(caesarencoder(word, int(key)))
 
     def menu_toggle(self):
         self.switch_tabs.emit()

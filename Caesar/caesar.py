@@ -1,4 +1,4 @@
-def caesarciphr(w, k):
+def caesarencoder(w, k):
     try:
         alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
 
