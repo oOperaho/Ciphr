@@ -6,8 +6,8 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesk
 
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
-
     return new_text
+
 
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
@@ -115,6 +115,8 @@ class CaesarTab(QWidget):
         self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
+        self.numberVld = QIntValidator(self)
+        self.caesarkey.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
@@ -141,8 +143,8 @@ class CaesarTab(QWidget):
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c;""")
-        self.result.setFont(QFont("Helvetica", 12))
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setFont(QFont("Helvetica", 10))
 
         self.caesarkey.setText("3")
         self.caesarkey.setGeometry(685, 320, 50, 30)
