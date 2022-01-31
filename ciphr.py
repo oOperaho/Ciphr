@@ -1,9 +1,8 @@
 import re
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QFont, QIcon, QIntValidator
-from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit
-
+from PyQt5.QtGui import QFont, QIcon
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
 
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
@@ -13,8 +12,14 @@ def process_text(text):
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
 
+
     def __init__(self):
         QWidget.__init__(self)
+
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
         self.url = "https://github.com/oOperaho/Ciphr"
         self.innic = QtWidgets.QLabel(self)
         self.ciphr_repo = QPushButton(self)
@@ -22,21 +27,23 @@ class MainUi(QWidget):
         self.cae = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
-        self.setGeometry(500, 250, 520, 400)
+        self.setGeometry(0, 0, 520, 400)
+        self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
-        self.showMaximized()
-        self.setWindowFlag(Qt.WindowMaximizeButtonHint, False)
+        self.setFixedSize(self.size()) # disable resizing
         self.menu()
 
     def menu(self):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
-        self.innic.setGeometry(620, 120, 190, 100)
+        self.innic.setGeometry(0, 0, 190, 100)
         self.innic.setFont(QFont("Impact", 35))
         self.innic.setAlignment(Qt.AlignCenter)
+        pos_x = self.width() - self.innic.width()
+        self.innic.move(int(pos_x / 2), 80)
 
         self.cae.setText("Caesar")
-        self.cae.setGeometry(665, 230, 100, 40)
+        self.cae.setGeometry(0, 0, 100, 40)
         self.cae.setFont(QFont("Helvetica", 15))
         self.cae.setStyleSheet("""QPushButton {
                                 background-color: #042c18; 
@@ -49,9 +56,11 @@ class MainUi(QWidget):
                                 border: 4px solid black;
                                 }""")
         self.cae.clicked.connect(self.caesar_toggle)
+        pos_x = self.width() - self.cae.width()
+        self.cae.move(int(pos_x / 2), 210)
 
         self.vig.setText("Vigenere")
-        self.vig.setGeometry(665, 280, 100, 40)
+        self.vig.setGeometry(0, 0, 100, 40)
         self.vig.setFont(QFont("Helvetica", 15))
         self.vig.setStyleSheet("""QPushButton {
                                 background-color: #042c18;
@@ -63,6 +72,8 @@ class MainUi(QWidget):
                                 color: black;
                                 border: 4px solid black;
                                 }""")
+        pos_x = self.width() - self.vig.width()
+        self.vig.move(int(pos_x / 2), 260)
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
@@ -78,6 +89,9 @@ class MainUi(QWidget):
                                         background-image: url(icons/gh.png);
                                         }""")
         self.ciphr_repo.clicked.connect(self.open_repo)
+        pos_y = self.height() - self.ciphr_repo.height()
+        margin = 15
+        self.ciphr_repo.move(margin, pos_y-margin)
 
     def caesar_toggle(self):
         self.switch_tabs.emit()
@@ -92,6 +106,10 @@ class CaesarTab(QWidget):
 
     def __init__(self):
         QWidget.__init__(self)
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
         self.backbutton = QPushButton(self)
         self.encodebutton = QPushButton(self)
         self.decodebutton = QPushButton(self)
@@ -102,7 +120,8 @@ class CaesarTab(QWidget):
         self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
-        self.setGeometry(500, 250, 520, 400)
+        self.setGeometry(0, 0, 520, 400)
+        self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
         self.caesar_window()
