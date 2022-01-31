@@ -15,5 +15,4 @@ def caesardecoder(w, k):
         out = alphabet.index(letter) + k
         l.append(alphabet[out])
 
-
     return "".join(l)

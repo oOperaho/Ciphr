@@ -1,8 +1,9 @@
 import re
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtGui import QFont, QIcon
+from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
+
 
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
@@ -11,7 +12,6 @@ def process_text(text):
 
 class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal()
-
 
     def __init__(self):
         QWidget.__init__(self)
@@ -30,7 +30,7 @@ class MainUi(QWidget):
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
-        self.setFixedSize(self.size()) # disable resizing
+        self.setFixedSize(self.size())  # disable resizing
         self.menu()
 
     def menu(self):
