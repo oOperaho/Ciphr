@@ -117,7 +117,7 @@ class CaesarTab(QWidget):
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c;""")
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         self.result.setFont(QFont("Helvetica", 12))
 
         self.caesarkey.setText("3")
