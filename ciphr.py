@@ -1,10 +1,10 @@
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtWidgets import QApplication, QPushButton, QMainWindow, QWidget
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget
 
 
-class MainUi(QMainWindow):
+class MainUi(QWidget):
     switch_tabs = QtCore.pyqtSignal(str)
 
     def __init__(self):
