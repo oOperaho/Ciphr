@@ -111,16 +111,16 @@ class CaesarTab(QWidget):
                                         }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+        self.caesarkey.setText("0")
+        self.caesarkey.setGeometry(685, 320, 50, 30)
+
         self.caesarinput.setText("word")
-        self.caesarinput.setGeometry(655, 290, 120, 30)
+        self.caesarinput.setGeometry(655, 280, 120, 30)
         self.caesarinput.setFont(QFont("Arial", 10))
         self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
-        self.caesarkey.setText("0")
-        self.caesarkey.setGeometry(655, 280, 50, 30)
-
         self.cryptbutton.setText("Encode/Decode")
-        self.cryptbutton.setGeometry(640, 340, 150, 40)
+        self.cryptbutton.setGeometry(640, 360, 150, 40)
         self.cryptbutton.setFont(QFont("Helvetica", 12))
         self.cryptbutton.setStyleSheet("""QPushButton {
                                         background-color: #042c18;
