@@ -7,6 +7,6 @@ def caesarciphr(w, k):
             l.append(alphabet[out])
 
         return "".join(l)
-    except ValueError:
+    except TypeError:
         return "Error! Type a number!"
 
