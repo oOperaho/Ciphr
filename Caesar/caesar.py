@@ -1,9 +1,11 @@
-word = str(input("Enter the word to encrypt: ")).strip().lower().replace(" ", "")
-key = int(input("Enter the caesar key (0-26): "))
-alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
+def caesarciphr(w, k):
+    w = str(input("Enter the word to encrypt: ")).strip().lower().replace(" ", "")
+    k = int(input("Enter the caesar key (0-26): "))
+    alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
 
-for letter in word:
-    out = alphabet.index(letter) + key
-    l.append(alphabet[out])
+    for letter in w:
+        out = alphabet.index(letter) + k
+        l.append(alphabet[out])
 
-print("".join(l))
+    return "".join(l)
+
