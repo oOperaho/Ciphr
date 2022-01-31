@@ -19,9 +19,9 @@ class MainUi(QWidget):
         self.setGeometry(500, 250, 520, 400)
         self.setStyleSheet("background-color: #052321;")
         self.showMaximized()
-        self.manu()
+        self.menu()
 
-    def manu(self):
+    def menu(self):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setGeometry(620, 120, 190, 100)
