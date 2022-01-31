@@ -113,6 +113,8 @@ class CaesarTab(QWidget):
 
         self.caesarkey.setText("0")
         self.caesarkey.setGeometry(685, 320, 50, 30)
+        self.caesarkey.setFont(QFont("Arial", 8))
+        self.caesarkey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
 
         self.caesarinput.setText("word")
         self.caesarinput.setGeometry(655, 280, 120, 30)
