@@ -58,8 +58,18 @@ class MainUi(QWidget):
                                 }""")
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
-        self.ciphr_repo.setStyleSheet("""background-color: #ADD45A; border: 1px solid black; border-radius: 5; 
-                                        background-image: url(icons/gh.png);""")
+        self.ciphr_repo.setStyleSheet("""QPushButton {
+                                        background-color: #ADD45A; 
+                                        border: 1px solid black; 
+                                        border-radius: 5; 
+                                        background-image: url(icons/gh.png);
+                                        }
+                                        QPushButton::hover {
+                                        background-color: #ADD45A; 
+                                        border: 1px solid black; 
+                                        border-radius: 10; 
+                                        background-image: url(icons/gh.png);
+                                        }""")
         self.ciphr_repo.clicked.connect(self.open_repo)
 
     def caesar_toggle(self):
