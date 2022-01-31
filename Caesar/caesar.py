@@ -9,4 +9,3 @@ def caesarciphr(w, k):
         return "".join(l)
     except TypeError:
         return "Error! Type a number!"
-
