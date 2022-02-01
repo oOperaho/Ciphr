@@ -1,4 +1,4 @@
-def vigenereencoder(w, k):
+def vigeneredecoder(w, k):
     from operator import sub
 
     word = str(input("Type the word to be decrypted: ")).strip().lower().replace(" ", "")

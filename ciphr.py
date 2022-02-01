@@ -315,7 +315,8 @@ class VigenereTab(QWidget):
         self.decodebutton.clicked.connect(self.decodevigenere)
 
     def encodevigenere(self):
-        from Vigenere import vigenere
+        from Vigenere.decoder import vigeneredecoder
+        from Vigenere.encoder import vigenereencoder
 
     def menu_toggle(self):
         self.switch_tab.emit()
