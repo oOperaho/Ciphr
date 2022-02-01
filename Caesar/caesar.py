@@ -1,18 +1,24 @@
 def caesarencoder(w, k):
-    alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
+    if k <= 26:
+        alphabet, out, l = " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz", "", []
 
-    for letter in w:
-        out = alphabet.index(letter) + k
-        l.append(alphabet[out])
+        for letter in w:
+            out = alphabet.index(letter) + k
+            l.append(alphabet[out])
 
-    return "".join(l)
+        return "".join(l)
+    else:
+        return "Key only between 1-26!"
 
 
 def caesardecoder(w, k):
-    alphabet, out, l = " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba", "", []
+    if k <= 26:
+        alphabet, out, l = " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba", "", []
 
-    for letter in w:
-        out = alphabet.index(letter) + k
-        l.append(alphabet[out])
+        for letter in w:
+            out = alphabet.index(letter) + k
+            l.append(alphabet[out])
 
-    return "".join(l)
+        return "".join(l)
+    else:
+        return "Key only between 1-26!"
