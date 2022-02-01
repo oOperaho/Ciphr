@@ -55,7 +55,7 @@ class MainUi(QWidget):
                                 color: black;
                                 border: 4px solid black;
                                 }""")
-        self.cae.clicked.connect(self.btn_toggle)
+        self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2), 210)
 
@@ -72,7 +72,7 @@ class MainUi(QWidget):
                                 color: black;
                                 border: 4px solid black;
                                 }""")
-        self.vig.clicked.connect(self.btn_toggle)
+        self.vig.clicked.connect(self.vig_toggle)
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2), 260)
 
@@ -94,7 +94,10 @@ class MainUi(QWidget):
         margin = 15
         self.ciphr_repo.move(margin, pos_y-margin)
 
-    def btn_toggle(self):
+    def cae_toggle(self):
+        self.switch_tabs.emit()
+
+    def vig_toggle(self):
         self.switch_tabs.emit()
 
     def open_repo(self):
