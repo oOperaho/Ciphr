@@ -29,7 +29,7 @@ def vigenereencoder(w, k):
 
     s, l, fin, enc = [], [], [], []
 
-    for i in w:
+    for i in word:
         s.append(letters.find(i))
 
     for n in range(0, len(s)):

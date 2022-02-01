@@ -29,7 +29,7 @@ def vigeneredecoder(w, k):
 
     s, l, fin, enc = [], [], [], []
 
-    for i in w:
+    for i in word:
         s.append(letters.find(i))
 
     for j in res:
