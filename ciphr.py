@@ -76,15 +76,15 @@ class MainUi(QWidget):
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
-                                        background-color: #ADD45A; 
-                                        border: 1px solid black; 
-                                        border-radius: 5; 
+                                        background-color: #ADD45A;
+                                        border: 1px solid black;
+                                        border-radius: 5;
                                         background-image: url(icons/gh.png);
                                         }
                                         QPushButton::hover {
-                                        background-color: #ADD45A; 
-                                        border: 1px solid black; 
-                                        border-radius: 10; 
+                                        background-color: #ADD45A;
+                                        border: 1px solid black;
+                                        border-radius: 10;
                                         background-image: url(icons/gh.png);
                                         }""")
         self.ciphr_repo.clicked.connect(self.open_repo)
@@ -174,7 +174,7 @@ class CaesarTab(QWidget):
                                         border: 4px solid black;
                                         }""")
         pos_x = self.width() - self.encodebutton.width()
-        self.encodebutton.move(int(pos_x / 2), 160)
+        self.encodebutton.move(int(pos_x / 2.5) + 7, 160)
         self.encodebutton.clicked.connect(self.encodecaesar)
 
         self.decodebutton.setText("Decode")
@@ -191,7 +191,7 @@ class CaesarTab(QWidget):
                                                 border: 4px solid black;
                                                 }""")
         pos_x = self.width() - self.decodebutton.width()
-        self.decodebutton.move(int(pos_x / 2), 160)
+        self.decodebutton.move(int(pos_x / 2.5) + 80, 160)
         self.decodebutton.clicked.connect(self.decodecaesar)
 
     def encodecaesar(self):
