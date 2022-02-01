@@ -11,6 +11,7 @@ def process_text(text):
 
 
 class MainUi(QWidget):
+
     switch_tabs = QtCore.pyqtSignal()
 
     def __init__(self):
@@ -101,6 +102,7 @@ class MainUi(QWidget):
 
 
 class CaesarTab(QWidget):
+
     switch_tabs = QtCore.pyqtSignal()
 
     def __init__(self):
@@ -210,6 +212,27 @@ class CaesarTab(QWidget):
 
     def menu_toggle(self):
         self.switch_tabs.emit()
+
+
+class VigenereTab(QWidget):
+
+    switch_tabs = QtCore.pyqtSignal()
+
+    def __init__(self):
+        QWidget.__init__(self)
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
+        self.setWindowTitle("Ciphr")
+        self.setWindowIcon(QIcon("icons/cr.png"))
+        self.setGeometry(0, 0, 520, 400)
+        self.move(qtRectangle.topLeft())
+        self.setStyleSheet("background-color: #052321;")
+        self.vigenere_window()
+
+    def vigenere_window(self):
+
 
 
 class Remote:
