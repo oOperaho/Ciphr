@@ -55,7 +55,7 @@ class MainUi(QWidget):
                                 color: black;
                                 border: 4px solid black;
                                 }""")
-        self.cae.clicked.connect(self.caesar_toggle)
+        self.cae.clicked.connect(self.btn_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2), 210)
 
