@@ -12,7 +12,8 @@ def process_text(text):
 
 class MainUi(QWidget):
 
-    switch_tabs = QtCore.pyqtSignal()
+    switch_tab1 = QtCore.pyqtSignal()
+    switch_tab2 = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
@@ -95,10 +96,10 @@ class MainUi(QWidget):
         self.ciphr_repo.move(margin, pos_y-margin)
 
     def cae_toggle(self):
-        self.switch_tabs.emit()
+        self.switch_tab1.emit()
 
     def vig_toggle(self):
-        self.switch_tabs.emit()
+        self.switch_tab2.emit()
 
     def open_repo(self):
         import webbrowser
@@ -107,7 +108,7 @@ class MainUi(QWidget):
 
 class CaesarTab(QWidget):
 
-    switch_tabs = QtCore.pyqtSignal()
+    switch_tab = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
@@ -216,12 +217,12 @@ class CaesarTab(QWidget):
         self.result.setText(caesardecoder(word, int(key)))
 
     def menu_toggle(self):
-        self.switch_tabs.emit()
+        self.switch_tab.emit()
 
 
 class VigenereTab(QWidget):
 
-    switch_tabs = QtCore.pyqtSignal()
+    switch_tab = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
@@ -254,7 +255,7 @@ class VigenereTab(QWidget):
         self.backbutton.clicked.connect(self.menu_toggle)
 
     def menu_toggle(self):
-        self.switch_tabs.emit()
+        self.switch_tab.emit()
 
 
 class Remote:
@@ -264,19 +265,19 @@ class Remote:
         self.vig_tab = VigenereTab()
 
     def main_window(self):
-        self.mwindow.switch_tabs.connect(self.caesar_tab)
-        self.mwindow.switch_tabs.connect(self.vigenere_tab)
+        self.mwindow.switch_tab1.connect(self.caesar_tab)
+        self.mwindow.switch_tab2.connect(self.vigenere_tab)
         self.cae_tab.close()
         self.vig_tab.close()
         self.mwindow.show()
 
     def caesar_tab(self):
-        self.cae_tab.switch_tabs.connect(self.main_window)
+        self.cae_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
         self.cae_tab.show()
 
     def vigenere_tab(self):
-        self.vig_tab.switch_tabs.connect(self.main_window)
+        self.vig_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
         self.vig_tab.show()
 
