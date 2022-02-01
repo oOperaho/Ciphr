@@ -128,6 +128,7 @@ class CaesarTab(QWidget):
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
+        self.setFixedSize(self.size())
         self.caesar_window()
 
     def caesar_window(self):
@@ -234,6 +235,7 @@ class VigenereTab(QWidget):
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
+        self.setFixedSize(self.size())
         self.vigenere_window()
 
     def vigenere_window(self):
