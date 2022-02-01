@@ -161,7 +161,7 @@ class CaesarTab(QWidget):
         self.caesarinput.move(int(pos_x / 2), 80)
 
         self.encodebutton.setText("Encode")
-        self.encodebutton.setGeometry(620, 360, 90, 40)
+        self.encodebutton.setGeometry(620, 360, 70, 30)
         self.encodebutton.setFont(QFont("Helvetica", 12))
         self.encodebutton.setStyleSheet("""QPushButton {
                                         background-color: #042c18;
@@ -178,7 +178,7 @@ class CaesarTab(QWidget):
         self.encodebutton.clicked.connect(self.encodecaesar)
 
         self.decodebutton.setText("Decode")
-        self.decodebutton.setGeometry(720, 360, 90, 40)
+        self.decodebutton.setGeometry(720, 360, 70, 30)
         self.decodebutton.setFont(QFont("Helvetica", 12))
         self.decodebutton.setStyleSheet("""QPushButton {
                                                 background-color: #042c18;
