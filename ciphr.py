@@ -173,6 +173,8 @@ class CaesarTab(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
+        pos_x = self.width() - self.encodebutton.width()
+        self.encodebutton.move(int(pos_x / 2), 150)
         self.encodebutton.clicked.connect(self.encodecaesar)
 
         self.decodebutton.setText("Decode")
@@ -188,6 +190,8 @@ class CaesarTab(QWidget):
                                                 color: black;
                                                 border: 4px solid black;
                                                 }""")
+        pos_x = self.width() - self.decodebutton.width()
+        self.decodebutton.move(int(pos_x / 2), 150)
         self.decodebutton.clicked.connect(self.decodecaesar)
 
     def encodecaesar(self):
