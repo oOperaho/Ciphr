@@ -271,11 +271,13 @@ class Remote:
     def caesar_tab(self):
         self.cae_tab.switch_tabs.connect(self.main_window)
         self.mwindow.close()
+        self.vig_tab.close()
         self.cae_tab.show()
 
     def vigenere_tab(self):
         self.vig_tab.switch_tabs.connect(self.main_window)
         self.mwindow.close()
+        self.cae_tab.close()
         self.vig_tab.show()
 
 
