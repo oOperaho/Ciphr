@@ -1,8 +1,6 @@
 def vigenereencoder(w, k):
     from operator import add
 
-    word = str(input("Type the word to be encrypted: ")).strip().lower().replace(" ", "")
-    key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
     nkey = 0
     res, w, letters = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz"
 

@@ -1,38 +1,35 @@
 def vigeneredecoder(w, k):
     from operator import sub
 
-    word = str(input("Type the word to be decrypted: ")).strip().lower().replace(" ", "")
-    key = str(input("Type the vigenere key: ")).strip().lower().replace(" ", "")
-    nkey = 0
-    res, w, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz ", " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba "
+    res, word, letters, srettel = "", "", " abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz ", " zyxwvutsrqponmlkjihgfedcbazyxwvutsrqponmlkjihgfedcba "
 
-    if len(word) > len(key):
-        nkey = len(word) - len(key)
-        if nkey < len(key):
-            w = key[:nkey]
-            res = key + w
-        elif nkey > len(key):
-            if len(key) == 1:
-                res = key * (nkey + 1)
-            elif len(key) == 2:
-                res = key * nkey
+    if len(w) > len(k):
+        nkey = len(w) - len(k)
+        if nkey < len(k):
+            word = k[:nkey]
+            res = k + w
+        elif nkey > len(k):
+            if len(k) == 1:
+                res = k * (nkey + 1)
+            elif len(k) == 2:
+                res = k * nkey
             else:
-                w = key + key[:nkey]
-                res = key + w
+                word = k + k[:nkey]
+                res = k + w
         else:
-            res += key + key
+            res += k + k
 
-    elif len(word) < len(key):
-        nkey = len(key) - len(word)
-        w = key[:-nkey]
+    elif len(w) < len(k):
+        nkey = len(k) - len(w)
+        w = k[:-nkey]
         res += w
 
     else:
-        res += key
+        res += k
 
     s, l, fin, enc = [], [], [], []
 
-    for i in word:
+    for i in w:
         s.append(letters.find(i))
 
     for j in res:
