@@ -230,7 +230,7 @@ class VigenereTab(QWidget):
         centerPoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerPoint)
 
-        self.backbutton = QPushButton()
+        self.backbutton = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -253,6 +253,61 @@ class VigenereTab(QWidget):
                                                 border: 3px solid black;
                                                 }""")
         self.backbutton.clicked.connect(self.menu_toggle)
+
+        self.result.setText("")
+        self.result.setGeometry(640, 410, 150, 20)
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setFont(QFont("Helvetica", 10))
+        pos_x = self.width() - self.result.width()
+        self.result.move(int(pos_x / 2), 200)
+
+        self.vigenerekey.setText("3")
+        self.vigenerekey.setGeometry(685, 320, 50, 30)
+        self.vigenerekey.setFont(QFont("Arial", 8))
+        self.vigenerekey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = self.width() - self.vigenerekey.width()
+        self.vigenerekey.move(int(pos_x / 2), 120)
+
+        self.vigenereinput.setText("word")
+        self.vigenereinput.setGeometry(655, 280, 120, 30)
+        self.vigenereinput.setFont(QFont("Arial", 10))
+        self.vigenereinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = self.width() - self.vigenereinput.width()
+        self.vigenereinput.move(int(pos_x / 2), 80)
+
+        self.encodebutton.setText("Encode")
+        self.encodebutton.setGeometry(620, 360, 70, 30)
+        self.encodebutton.setFont(QFont("Helvetica", 11))
+        self.encodebutton.setStyleSheet("""QPushButton {
+                                                background-color: #042c18;
+                                                color: #dbf45c;
+                                                border: 2px solid black;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 4px solid black;
+                                                }""")
+        pos_x = self.width() - self.encodebutton.width()
+        self.encodebutton.move(int(pos_x / 2.5) + 7, 160)
+        self.encodebutton.clicked.connect(self.encodecaesar)
+
+        self.decodebutton.setText("Decode")
+        self.decodebutton.setGeometry(720, 360, 70, 30)
+        self.decodebutton.setFont(QFont("Helvetica", 11))
+        self.decodebutton.setStyleSheet("""QPushButton {
+                                                        background-color: #042c18;
+                                                        color: #dbf45c;
+                                                        border: 2px solid black;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: #8ac431;
+                                                        color: black;
+                                                        border: 4px solid black;
+                                                        }""")
+        pos_x = self.width() - self.decodebutton.width()
+        self.decodebutton.move(int(pos_x / 2.5) + 83, 160)
+        self.decodebutton.clicked.connect(self.decodecaesar)
 
     def menu_toggle(self):
         self.switch_tab.emit()
