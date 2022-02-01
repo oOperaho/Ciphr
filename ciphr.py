@@ -72,6 +72,7 @@ class MainUi(QWidget):
                                 color: black;
                                 border: 4px solid black;
                                 }""")
+        self.vig.clicked.connect(self.btn_toggle)
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2), 260)
 
@@ -93,7 +94,7 @@ class MainUi(QWidget):
         margin = 15
         self.ciphr_repo.move(margin, pos_y-margin)
 
-    def caesar_toggle(self):
+    def btn_toggle(self):
         self.switch_tabs.emit()
 
     def open_repo(self):
@@ -232,7 +233,19 @@ class VigenereTab(QWidget):
         self.vigenere_window()
 
     def vigenere_window(self):
-
+        self.backbutton.setText("←")
+        self.backbutton.setGeometry(10, 10, 60, 35)
+        self.backbutton.setFont(QFont("Helvetica", 15))
+        self.backbutton.setStyleSheet("""QPushButton {
+                                                background-color: #052321;
+                                                color: #70ff03;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 3px solid black;
+                                                }""")
+        self.backbutton.clicked.connect(self.menu_toggle)
 
 
 class Remote:
