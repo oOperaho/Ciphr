@@ -248,6 +248,9 @@ class VigenereTab(QWidget):
                                                 }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+    def menu_toggle(self):
+        self.switch_tabs.emit()
+
 
 class Remote:
     def __init__(self):
