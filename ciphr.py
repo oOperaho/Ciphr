@@ -231,6 +231,11 @@ class VigenereTab(QWidget):
         qtRectangle.moveCenter(centerPoint)
 
         self.backbutton = QPushButton(self)
+        self.result = QtWidgets.QLabel(self)
+        self.vigenerekey = QLineEdit(self)
+        self.vigenereinput = QLineEdit(self)
+        self.encodebutton = QPushButton(self)
+        self.decodebutton = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
