@@ -250,18 +250,26 @@ class VigenereTab(QWidget):
 
 class Remote:
     def __init__(self):
-        self.cae_tab = CaesarTab()
         self.mwindow = MainUi()
+        self.cae_tab = CaesarTab()
+        self.vig_tab = VigenereTab()
 
     def main_window(self):
         self.mwindow.switch_tabs.connect(self.caesar_tab)
+        self.mwindow.switch_tabs.connect(self.vigenere_tab)
         self.cae_tab.close()
+        self.vig_tab.close()
         self.mwindow.show()
 
     def caesar_tab(self):
         self.cae_tab.switch_tabs.connect(self.main_window)
         self.mwindow.close()
         self.cae_tab.show()
+
+    def vigenere_tab(self):
+        self.vig_tab.switch_tabs.connect(self.main_window)
+        self.mwindow.close()
+        self.vig_tab.show()
 
 
 def display():
