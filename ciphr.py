@@ -266,7 +266,7 @@ class VigenereTab(QWidget):
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
-        self.vigenerekey.setText("3")
+        self.vigenerekey.setText("key")
         self.vigenerekey.setGeometry(685, 320, 50, 30)
         self.vigenerekey.setFont(QFont("Arial", 8))
         self.vigenerekey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
