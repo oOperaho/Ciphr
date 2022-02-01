@@ -15,7 +15,6 @@ class MainUi(QWidget):
 
     def __init__(self):
         QWidget.__init__(self)
-
         qtRectangle = self.frameGeometry()
         centerPoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerPoint)
@@ -123,7 +122,6 @@ class CaesarTab(QWidget):
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
-        self.showMaximized()
         self.caesar_window()
 
     def caesar_window(self):
