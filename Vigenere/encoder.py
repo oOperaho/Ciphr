@@ -24,7 +24,7 @@ def vigeneredecoder(w, k):
         word_index = ord(y)
 
     for i in range(len(word_index)):
-        c = (word_index[i] + key_index[i % kl]) % 26
+        c = (word_index[i] - key_index[i % kl]) % 26
         decrypt += chr(c + 65)
 
     return decrypt
