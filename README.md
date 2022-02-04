@@ -8,6 +8,7 @@ I made this in order to study and solve some encryptions, trying to create a enc
 ### ✔ Vigenere
 ### Base64
 ### Z-Base32
+### Morbit
 
 
 #### Something like that:
