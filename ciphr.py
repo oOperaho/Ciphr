@@ -5,6 +5,16 @@ from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
 
 
+def newKey(w, k):
+    k = list(k)
+    if len(w) == len(k):
+        return k
+    else:
+        for i in range(len(w) - len(k)):
+            k.append(k[i % len(k)])
+    return "".join(k)
+
+
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
     return new_text
@@ -320,6 +330,9 @@ class VigenereTab(QWidget):
         word = self.result.text()
         word = process_text(word)
         key = self.result.text()
+        key = process_text(key)
+        key = newKey(word, key)
+
         self.result.setText(vigenereencoder(word, key))
 
     def decodevigenere(self):
@@ -328,6 +341,9 @@ class VigenereTab(QWidget):
         word = self.result.text()
         word = process_text(word)
         key = self.result.text()
+        key = process_text(key)
+        key = newKey(word, key)
+
         self.result.setText(vigeneredecoder(word, key))
 
     def menu_toggle(self):
