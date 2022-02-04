@@ -323,7 +323,7 @@ class VigenereTab(QWidget):
         self.result.setText(vigenereencoder(word, key))
 
     def decodevigenere(self):
-
+        from Vigenere.vigenere import vigeneredecoder
 
         word = self.result.text()
         word = process_text(word)
