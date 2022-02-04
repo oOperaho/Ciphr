@@ -315,7 +315,7 @@ class VigenereTab(QWidget):
         self.decodebutton.clicked.connect(self.decodevigenere)
 
     def encodevigenere(self):
-
+        from Vigenere.vigenere import vigenereencoder
 
         word = self.result.text()
         word = process_text(word)
