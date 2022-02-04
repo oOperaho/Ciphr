@@ -327,23 +327,25 @@ class VigenereTab(QWidget):
     def encodevigenere(self):
         from Vigenere.vigenere import vigenereencoder
 
-        word = self.result.text()
+        word = self.vigenereinput.text()
         word = process_text(word)
-        key = self.result.text()
+        key = self.vigenerekey.text()
         key = process_text(key)
         key = newKey(word, key)
 
+        print(key, word)
         self.result.setText(vigenereencoder(word, key))
 
     def decodevigenere(self):
         from Vigenere.vigenere import vigeneredecoder
 
-        word = self.result.text()
+        word = self.vigenereinput.text()
         word = process_text(word)
-        key = self.result.text()
+        key = self.vigenerekey.text()
         key = process_text(key)
         key = newKey(word, key)
 
+        print(key, word)
         self.result.setText(vigeneredecoder(word, key))
 
     def menu_toggle(self):
