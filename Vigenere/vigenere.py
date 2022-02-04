@@ -17,7 +17,7 @@ def vigenereencoder(message, key):
             encrypted += index_to_letter[number]
             i += 1
 
-    return encrypted
+    print(encrypted)
 
 
 def vigeneredecoder(cipher, key):
@@ -33,4 +33,4 @@ def vigeneredecoder(cipher, key):
             decrypted += index_to_letter[number]
             i += 1
 
-    return decrypted
+    print(decrypted)
