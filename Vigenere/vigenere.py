@@ -1,30 +1,36 @@
-def vigenereencoder(w, k):
-    kl = len(k)
-    key_index, word_index = [], []
-    encrypt = ""
-    for x in k:
-        key_index = ord(x)
-    for y in w:
-        word_index = ord(y)
+alphabet = "abcdefghijklmnopqrstuvwxyz "
 
-    for i in range(len(word_index)):
-        c = (word_index[i] + key_index[i % kl]) % 26
-        encrypt += chr(c + 65)
-
-    return encrypt
+letter_to_index = dict(zip(alphabet, range(len(alphabet))))
+index_to_letter = dict(zip(range(len(alphabet)), alphabet))
 
 
-def vigeneredecoder(w, k):
-    kl = len(k)
-    key_index, word_index = [], []
-    decrypt = ""
-    for x in k:
-        key_index = ord(x)
-    for y in w:
-        word_index = ord(y)
+def vigenereencoder(message, key):
+    encrypted = ""
+    split_message = [
+        message[i: i + len(key)] for i in range(0, len(message), len(key))
+    ]
 
-    for i in range(len(word_index)):
-        c = (word_index[i] - key_index[i % kl]) % 26
-        decrypt += chr(c + 65)
+    for each_split in split_message:
+        i = 0
+        for letter in each_split:
+            number = (letter_to_index[letter] + letter_to_index[key[i]]) % len(alphabet)
+            encrypted += index_to_letter[number]
+            i += 1
 
-    return decrypt
+    return encrypted
+
+
+def vigeneredecoder(cipher, key):
+    decrypted = ""
+    split_encrypted = [
+        cipher[i: i + len(key)] for i in range(0, len(cipher), len(key))
+    ]
+
+    for each_split in split_encrypted:
+        i = 0
+        for letter in each_split:
+            number = (letter_to_index[letter] - letter_to_index[key[i]]) % len(alphabet)
+            decrypted += index_to_letter[number]
+            i += 1
+
+    return decrypted
