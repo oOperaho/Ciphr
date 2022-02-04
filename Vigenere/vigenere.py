@@ -1,18 +1,13 @@
 def ciphertext(w, k):
-    l, c = list(k), 0
-    dif = abs(len(w) - len(k))
-    while True:
-        if len(w) == len(k):
-            return "".join(l)
-        elif len(w) < len(k):
-            "".join(l)
-            l = l[:dif]
-            return "".join(l)
-        else:
-            l.append(k[c])
-            if len(l) == len(w):
-                break
-            c += 1
+    key = list(k)
+    if len(w) == len(key):
+        return key
+    elif len(w) < len(k):
+        return "".join(k[:len(w)])
+    else:
+        for i in range(len(w) - len(key)):
+            key.append(key[i % len(key)])
+    return "" . join(key)
 
 
-print(ciphertext("banana", "oi"))
+
