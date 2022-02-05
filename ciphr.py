@@ -371,7 +371,7 @@ class VigenereTab(QWidget):
                                                 border: 4px solid black;
                                                 }""")
         pos_x = self.width() - self.encodebutton.width()
-        self.encodebutton.move(int(pos_x / 2.5) + 7, 160)
+        self.encodebutton.move(int(pos_x / 2) + 40, 160)
         self.encodebutton.clicked.connect(self.encodevigenere)
 
         self.decodebutton.setText("Decode")
@@ -388,7 +388,7 @@ class VigenereTab(QWidget):
                                                         border: 4px solid black;
                                                         }""")
         pos_x = self.width() - self.decodebutton.width()
-        self.decodebutton.move(int(pos_x / 2.5) + 83, 160)
+        self.decodebutton.move(int(pos_x / 2) - 40, 160)
         self.decodebutton.clicked.connect(self.decodevigenere)
 
     def encodevigenere(self):
