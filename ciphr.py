@@ -138,9 +138,9 @@ class BinaryTab(QWidget):
         self.encodeinput = QLineEdit(self)
         self.decodebutton = QPushButton(self)
         self.decodeinput = QLineEdit(self)
-        self.numberVld = QIntValidator(self)
-        self.encodeinput.setValidator(self.numberVld)
-        self.decodeinput.setValidator(self.numberVld)
+        # self.numberVld = QIntValidator(self)
+        # self.encodeinput.setValidator(self.numberVld)
+        # self.decodeinput.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
@@ -224,6 +224,7 @@ class BinaryTab(QWidget):
         from Binary.binary import binaryencoder
 
         decimal = self.encodeinput.text()
+        decimal = tools.process_int(decimal)
         out = binaryencoder(int(decimal))
         self.result.setText(str(out))
 
@@ -231,6 +232,7 @@ class BinaryTab(QWidget):
         from Binary.binary import binarydecoder
 
         decimal = self.decodeinput.text()
+        decimal = tools.process_int(decimal)
         out = binarydecoder(int(decimal))
         self.result.setText(str(out))
 
@@ -253,8 +255,8 @@ class CaesarTab(QWidget):
         self.decodebutton = QPushButton(self)
         self.caesarinput = QLineEdit(self)
         self.caesarkey = QLineEdit(self)
-        self.numberVld = QIntValidator(self)
-        self.caesarkey.setValidator(self.numberVld)
+        # self.numberVld = QIntValidator(self)
+        # self.caesarkey.setValidator(self.numberVld)
         self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
@@ -339,6 +341,7 @@ class CaesarTab(QWidget):
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
+        key = tools.process_int(key)
         self.result.setText(caesarencoder(word, int(key)))
 
     def decodecaesar(self):
@@ -346,6 +349,7 @@ class CaesarTab(QWidget):
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
+        key = tools.process_int(key)
         self.result.setText(caesardecoder(word, int(key)))
 
     def menu_toggle(self):

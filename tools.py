@@ -14,3 +14,8 @@ def newKey(w, k):
 def process_text(text):
     new_text = re.sub("[^A-Za-z\s]", "", text)
     return new_text
+
+
+def process_int(num):
+    new_int = re.sub("[^0-9]", "", num)
+    return new_int
