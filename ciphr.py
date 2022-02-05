@@ -402,19 +402,19 @@ class VigenereTab(QWidget):
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
-        self.vigenerekey.setText("key")
-        self.vigenerekey.setGeometry(685, 320, 120, 30)
-        self.vigenerekey.setFont(QFont("Arial", 10))
-        self.vigenerekey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        pos_x = self.width() - self.vigenerekey.width()
-        self.vigenerekey.move(int(pos_x / 2), 120)
-
         self.vigenereinput.setText("word")
         self.vigenereinput.setGeometry(655, 280, 120, 30)
         self.vigenereinput.setFont(QFont("Arial", 10))
         self.vigenereinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = self.width() - self.vigenereinput.width()
         self.vigenereinput.move(int(pos_x / 2), 80)
+
+        self.vigenerekey.setText("key")
+        self.vigenerekey.setGeometry(685, 320, 120, 30)
+        self.vigenerekey.setFont(QFont("Arial", 10))
+        self.vigenerekey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = self.width() - self.vigenerekey.width()
+        self.vigenerekey.move(int(pos_x / 2), 120)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
@@ -468,7 +468,7 @@ class VigenereTab(QWidget):
         word = tools.process_text(word)
         key = self.vigenerekey.text()
         key = tools.process_text(key)
-        key = tools.newKey(word, key)
+        # key = tools.newKey(word, key)
 
         self.result.setText(vigeneredecoder(word.upper(), key.upper()))
 
