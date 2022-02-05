@@ -8,7 +8,7 @@ def newKey(w, k):
     else:
         for i in range(len(w) - len(k)):
             k.append(k[i % len(k)])
-    return "".join(k)
+    return "".join(k) + " "
 
 
 def process_text(text):
