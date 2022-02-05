@@ -3,7 +3,7 @@
 This cryptography is pretty simple, and it requires nothing but the positioning of the numbers on the alphabet. All you need is a word/sentence, and a number as a key. 
 
 For example, if you want to hide the word "orange", and you choose 3 as a key, you have to go through each letter of the word, adding 3 positions on the alphabet. So, the
-"O on "orange" will be replaced by "R". So:
+"O on "orange" will be replaced by "R". The decode process does the same thing, but it subtracts the value of the letter. So:
 
 ## Encode = Word{Letter} + Key{Letter}
 ## Decode = Word{Letter} - Key{Letter}
