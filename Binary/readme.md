@@ -16,5 +16,5 @@ Well, the Binary → Decimal part is a little more difficult, but not complex at
 in that way:
 Every digit (bit) has its position, so you can pick the number (0 or 1) and multiply it by 2 to the power of the position of the digit _backwards_. Then you add the results to get your decimal. It is also important to say that the position of the number starts with 0.
 
-#### 1101 → 1 x 2³ = 8  |  1 x 2² = 4  |  0 x 2² = 0  |  1 x 2¹ = 2  → 8 + 4 + 0 + 2 = *14*
+### 1101 → 1 x 2³ = 8  |  1 x 2² = 4  |  0 x 2² = 0  |  1 x 2¹ = 2  → 8 + 4 + 0 + 2 = *14*
 
