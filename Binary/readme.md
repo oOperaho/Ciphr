@@ -12,3 +12,5 @@ I just used a while to loop through the values of the decimal, and then append a
 
 
 
+Well, the Binary → Decimal part is a little more difficult, but not complex at all. The code is even smaller than the Dec → Bin code.
+
