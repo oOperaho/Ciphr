@@ -119,6 +119,12 @@ class BinaryTab(QWidget):
         self.numberVld = QIntValidator(self)
         self.encodeinput.setValidator(self.numberVld)
         self.decodeinput.setValidator(self.numberVld)
+        self.setWindowTitle("Ciphr")
+        self.setWindowIcon(QIcon("icons/cr.png"))
+        self.setGeometry(0, 0, 520, 400)
+        self.move(qtRectangle.topLeft())
+        self.setStyleSheet("background-color: #052321;")
+        self.setFixedSize(self.size())
 
 
 class CaesarTab(QWidget):
