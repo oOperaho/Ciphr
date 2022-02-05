@@ -224,7 +224,7 @@ class BinaryTab(QWidget):
         from Binary.binary import binaryencoder
 
         decimal = self.encodeinput.text()
-        if decimal != ":":
+        if decimal != "":
             decimal = tools.process_int(decimal)
             out = binaryencoder(int(decimal))
             self.result.setText(str(out))
