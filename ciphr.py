@@ -200,7 +200,7 @@ class BinaryTab(QWidget):
                                                border: 4px solid black;
                                                }""")
         pos_x = self.width() - self.encodebutton.width()
-        self.encodebutton.move(int(pos_x / 2) + 40, 165)
+        self.encodebutton.move(int(pos_x / 2) - 40, 165)
         self.encodebutton.clicked.connect(self.encodebinary)
 
         self.decodebutton.setText("Decode")
@@ -217,7 +217,7 @@ class BinaryTab(QWidget):
                                                        border: 4px solid black;
                                                        }""")
         pos_x = self.width() - self.decodebutton.width()
-        self.decodebutton.move(int(pos_x / 2) - 40, 165)
+        self.decodebutton.move(int(pos_x / 2) + 40, 165)
         self.decodebutton.clicked.connect(self.decodebinary)
 
     def encodebinary(self):
@@ -230,7 +230,7 @@ class BinaryTab(QWidget):
     def decodebinary(self):
         from Binary.binary import binarydecoder
 
-        decimal  = self.decodeinput.text()
+        decimal = self.decodeinput.text()
         out = binarydecoder(int(decimal))
         self.result.setText(str(out))
 
