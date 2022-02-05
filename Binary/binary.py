@@ -1,4 +1,4 @@
-def binaryencoder(n):
+def binaryencoder(n=0):
     if n == 0:
         return 0
     c = n
@@ -16,7 +16,7 @@ def binaryencoder(n):
     return int(out)
 
 
-def binarydecoder(n):
+def binarydecoder(n=0):
     if n == 0:
         return 0
     x = list(map(str, str(n)))
