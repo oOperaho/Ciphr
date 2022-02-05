@@ -52,7 +52,7 @@ class MainUi(QWidget):
                                         color: black;
                                         border: 4px solid black;
                                         }""")
-        self.biny.clicked.connect(self.cae_toggle)
+        self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
         self.biny.move(int(pos_x / 2), 210)
 
