@@ -340,7 +340,6 @@ class CaesarTab(QWidget):
 
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
-
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
@@ -350,7 +349,6 @@ class CaesarTab(QWidget):
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
-
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
