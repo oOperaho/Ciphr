@@ -1,5 +1,5 @@
 def binaryencoder(n):
-    if n == 0:
+    if n == 0 or n == "":
         return 0
     c = n
     b = []
@@ -17,7 +17,7 @@ def binaryencoder(n):
 
 
 def binarydecoder(n):
-    if n == 0:
+    if n == 0 or n == "":
         return 0
     x = list(map(str, str(n)))
     out = 0
