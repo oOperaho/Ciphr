@@ -14,4 +14,3 @@ def vigeneredecoder(w, k):
         x += ord('A')
         decrypt.append(chr(x))
     return "".join(decrypt).lower()
-
