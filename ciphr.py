@@ -225,7 +225,6 @@ class BinaryTab(QWidget):
 
         decimal = self.encodeinput.text()
         out = binaryencoder(int(decimal))
-
         self.result.setText(str(out))
 
     def decodebinary(self):
@@ -233,7 +232,6 @@ class BinaryTab(QWidget):
 
         decimal = self.decodeinput.text()
         out = binarydecoder(int(decimal))
-
         self.result.setText(str(out))
 
     def menu_toggle(self):
@@ -341,7 +339,6 @@ class CaesarTab(QWidget):
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
-
         self.result.setText(caesarencoder(word, int(key)))
 
     def decodecaesar(self):
@@ -349,7 +346,6 @@ class CaesarTab(QWidget):
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
-
         self.result.setText(caesardecoder(word, int(key)))
 
     def menu_toggle(self):
