@@ -40,10 +40,10 @@ class MainUi(QWidget):
         pos_x = self.width() - self.innic.width()
         self.innic.move(int(pos_x / 2), 80)
 
-        self.cae.setText("Binary")
-        self.cae.setGeometry(0, 0, 100, 40)
-        self.cae.setFont(QFont("Helvetica", 15))
-        self.cae.setStyleSheet("""QPushButton {
+        self.biny.setText("Binary")
+        self.biny.setGeometry(0, 0, 100, 40)
+        self.biny.setFont(QFont("Helvetica", 15))
+        self.biny.setStyleSheet("""QPushButton {
                                         background-color: #042c18; 
                                         color: #dbf45c; 
                                         border: 2px solid black;
@@ -55,7 +55,7 @@ class MainUi(QWidget):
                                         }""")
         self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
-        self.biny.move(int(pos_x / 2), 210)
+        self.biny.move(int(pos_x / 2), 160)
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
