@@ -111,6 +111,15 @@ class BinaryTab(QWidget):
         centerPoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerPoint)
 
+        self.backbutton = QPushButton(self)
+        self.encodebutton = QPushButton(self)
+        self.encodeinput = QLineEdit(self)
+        self.decodebutton = QPushButton(self)
+        self.decodeinput = QLineEdit(self)
+        self.numberVld = QIntValidator(self)
+        self.encodeinput.setValidator(self.numberVld)
+        self.decodeinput.setValidator(self.numberVld)
+
 
 class CaesarTab(QWidget):
 
