@@ -7,8 +7,7 @@ def binaryencoder(n):
         b.append(c % 2)
         c = c // 2
 
-    l = list(reversed(b))
-    out = ""
+    l, out = list(reversed(b)), ""
 
     for i in l:
         out += str(i) + ""
