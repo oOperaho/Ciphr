@@ -2,15 +2,16 @@ def vigenereencoder(w, k):
     encrypt = []
     for i in range(len(w)):
         x = (ord(w[i]) + ord(k[i])) % 26
-        x += ord('a')
+        x += ord('A')
         encrypt.append(chr(x))
-    return "".join(encrypt)
+    return "".join(encrypt).lower()
 
 
 def vigeneredecoder(w, k):
     decrypt = []
     for i in range(len(w)):
         x = (ord(w[i]) - ord(k[i]) + 26) % 26
-        x += ord('a')
+        x += ord('A')
         decrypt.append(chr(x))
     return "".join(decrypt)
+
