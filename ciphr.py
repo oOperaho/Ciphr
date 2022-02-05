@@ -1,23 +1,8 @@
-import re
+import tools
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon, QIntValidator
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
-
-
-def newKey(w, k):
-    k = list(k)
-    if len(w) == len(k):
-        return k
-    else:
-        for i in range(len(w) - len(k)):
-            k.append(k[i % len(k)])
-    return "".join(k)
-
-
-def process_text(text):
-    new_text = re.sub("[^A-Za-z\s]", "", text)
-    return new_text
 
 
 class MainUi(QWidget):
@@ -215,14 +200,14 @@ class CaesarTab(QWidget):
     def encodecaesar(self):
         from Caesar.caesar import caesarencoder
         word = self.caesarinput.text()
-        word = process_text(word)
+        word = tools.process_text(word)
         key = self.caesarkey.text()
         self.result.setText(caesarencoder(word, int(key)))
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
         word = self.caesarinput.text()
-        word = process_text(word)
+        word = tools.process_text(word)
         key = self.caesarkey.text()
         self.result.setText(caesardecoder(word, int(key)))
 
