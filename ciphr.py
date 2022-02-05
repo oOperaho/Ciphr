@@ -344,9 +344,11 @@ class CaesarTab(QWidget):
         word = self.caesarinput.text()
         word = tools.process_text(word)
         key = self.caesarkey.text()
-        key = tools.process_int(key)
-
-        self.result.setText(caesarencoder(word, int(key)))
+        if key != "":
+            key = tools.process_int(key)
+            self.result.setText(caesarencoder(word, int(key)))
+        else:
+            self.result.setText(word)
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
