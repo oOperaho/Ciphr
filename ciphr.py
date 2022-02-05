@@ -38,7 +38,7 @@ class MainUi(QWidget):
         self.innic.setFont(QFont("Impact", 35))
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
-        self.innic.move(int(pos_x / 2), 80)
+        self.innic.move(int(pos_x / 2), 50)
 
         self.biny.setText("Binary")
         self.biny.setGeometry(0, 0, 100, 40)
@@ -414,6 +414,7 @@ class Remote:
         self.mwindow.switch_tab1.connect(self.binary_tab)
         self.mwindow.switch_tab2.connect(self.caesar_tab)
         self.mwindow.switch_tab3.connect(self.vigenere_tab)
+        self.bin_tab.close()
         self.cae_tab.close()
         self.vig_tab.close()
         self.mwindow.show()
