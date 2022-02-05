@@ -395,6 +395,11 @@ class Remote:
         self.vig_tab.close()
         self.mwindow.show()
 
+    def binary_tab(self):
+        self.bin_tab.switch_tab.connect(self.main_window)
+        self.mwindow.close()
+        self.bin_tab.show()
+
     def caesar_tab(self):
         self.cae_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
