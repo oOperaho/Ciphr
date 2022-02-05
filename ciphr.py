@@ -19,8 +19,9 @@ class MainUi(QWidget):
         self.url = "https://github.com/oOperaho/Ciphr"
         self.innic = QtWidgets.QLabel(self)
         self.ciphr_repo = QPushButton(self)
-        self.vig = QPushButton(self)
+        self.biny = QPushButton(self)
         self.cae = QPushButton(self)
+        self.vig = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -37,6 +38,23 @@ class MainUi(QWidget):
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
         self.innic.move(int(pos_x / 2), 80)
+
+        self.cae.setText("Binary")
+        self.cae.setGeometry(0, 0, 100, 40)
+        self.cae.setFont(QFont("Helvetica", 15))
+        self.cae.setStyleSheet("""QPushButton {
+                                        background-color: #042c18; 
+                                        color: #dbf45c; 
+                                        border: 2px solid black;
+                                        }
+                                        QPushButton::hover {
+                                        background-color: #8ac431;
+                                        color: black;
+                                        border: 4px solid black;
+                                        }""")
+        self.biny.clicked.connect(self.cae_toggle)
+        pos_x = self.width() - self.biny.width()
+        self.biny.move(int(pos_x / 2), 210)
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
@@ -90,11 +108,14 @@ class MainUi(QWidget):
         margin = 15
         self.ciphr_repo.move(margin, pos_y-margin)
 
-    def cae_toggle(self):
+    def bin_toggle(self):
         self.switch_tab1.emit()
 
-    def vig_toggle(self):
+    def cae_toggle(self):
         self.switch_tab2.emit()
+
+    def vig_toggle(self):
+        self.switch_tab3.emit()
 
     def open_repo(self):
         import webbrowser
