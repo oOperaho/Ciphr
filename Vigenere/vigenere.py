@@ -13,5 +13,5 @@ def vigeneredecoder(w, k):
         x = (ord(w[i]) - ord(k[i]) + 26) % 26
         x += ord('A')
         decrypt.append(chr(x))
-    return "".join(decrypt)
+    return "".join(decrypt).lower()
 
