@@ -166,11 +166,18 @@ class BinaryTab(QWidget):
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.encodeinput.setText("0")
-        self.encodeinput.setGeometry(655, 280, 40, 30)
+        self.encodeinput.setGeometry(655, 280, 70, 30)
         self.encodeinput.setFont(QFont("Arial", 10))
         self.encodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = (self.width() - self.encodeinput.width())
         self.encodeinput.move(int(pos_x / 2) - 50, 130)
+
+        self.decodeinput.setText("0")
+        self.decodeinput.setGeometry(655, 280, 70, 30)
+        self.decodeinput.setFont(QFont("Arial", 10))
+        self.decodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = (self.width() - self.decodeinput.width())
+        self.decodeinput.move(int(pos_x / 2) + 50, 130)
 
     def menu_toggle(self):
         self.switch_tab.emit()
