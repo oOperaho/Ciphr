@@ -348,7 +348,7 @@ class CaesarTab(QWidget):
             key = tools.process_int(key)
             self.result.setText(caesarencoder(word, int(key)))
         else:
-            self.result.setText(word)
+            self.result.setText("?")
 
     def decodecaesar(self):
         from Caesar.caesar import caesardecoder
@@ -360,7 +360,7 @@ class CaesarTab(QWidget):
             key = tools.process_int(key)
             self.result.setText(caesardecoder(word, int(key)))
         else:
-            self.result.setText(word)
+            self.result.setText("?")
 
     def menu_toggle(self):
         self.switch_tab.emit()
@@ -471,7 +471,7 @@ class VigenereTab(QWidget):
             key = tools.newKey(word, key)
             self.result.setText(vigenereencoder(word.upper(), key.upper()))
         else:
-            self.result.setText(word)
+            self.result.setText("?")
 
     def decodevigenere(self):
         from Vigenere.vigenere import vigeneredecoder
@@ -484,7 +484,7 @@ class VigenereTab(QWidget):
             key = tools.newKey(word, key)
             self.result.setText(vigeneredecoder(word.upper(), key.upper()))
         else:
-            self.result.setText(word)
+            self.result.setText("?")
 
     def menu_toggle(self):
         self.switch_tab.emit()
