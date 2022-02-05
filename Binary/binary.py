@@ -14,14 +14,3 @@ def binaryencoder(n):
     return out
 
 
-def binarydecoder(n):
-    string = str(n)
-    x = list(string)
-    out = []
-    for y in range(0, len(x)):
-        if x[y] == "1":
-            out.append(2 ** (len(x) - y - 1))
-    return "".join(out)
-
-
-print(binarydecoder(1101))

@@ -126,6 +126,22 @@ class BinaryTab(QWidget):
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
         self.setFixedSize(self.size())
+        self.binary_window()
+
+    def binary_window(self):
+        self.backbutton.setText("←")
+        self.backbutton.setGeometry(10, 10, 60, 35)
+        self.backbutton.setFont(QFont("Helvetica", 15))
+        self.backbutton.setStyleSheet("""QPushButton {
+                                                background-color: #052321;
+                                                color: #70ff03;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 3px solid black;
+                                                }""")
+        self.backbutton.clicked.connect(self.menu_toggle)
 
 
 class CaesarTab(QWidget):
