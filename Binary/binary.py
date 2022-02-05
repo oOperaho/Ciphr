@@ -14,3 +14,5 @@ def binaryencoder(n):
     return out
 
 
+def binarydecoder(n):
+
