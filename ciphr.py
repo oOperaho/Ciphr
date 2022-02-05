@@ -186,6 +186,40 @@ class BinaryTab(QWidget):
         pos_x = (self.width() - self.decodeinput.width())
         self.decodeinput.move(int(pos_x / 2) + 50, 130)
 
+        self.encodebutton.setText("Encode")
+        self.encodebutton.setGeometry(620, 360, 70, 30)
+        self.encodebutton.setFont(QFont("Helvetica", 11))
+        self.encodebutton.setStyleSheet("""QPushButton {
+                                               background-color: #042c18;
+                                               color: #dbf45c;
+                                               border: 2px solid black;
+                                               }
+                                               QPushButton::hover {
+                                               background-color: #8ac431;
+                                               color: black;
+                                               border: 4px solid black;
+                                               }""")
+        pos_x = self.width() - self.encodebutton.width()
+        self.encodebutton.move(int(pos_x / 2) + 40, 160)
+        self.encodebutton.clicked.connect(self.encodebinary)
+
+        self.decodebutton.setText("Decode")
+        self.decodebutton.setGeometry(720, 360, 70, 30)
+        self.decodebutton.setFont(QFont("Helvetica", 11))
+        self.decodebutton.setStyleSheet("""QPushButton {
+                                                       background-color: #042c18;
+                                                       color: #dbf45c;
+                                                       border: 2px solid black;
+                                                       }
+                                                       QPushButton::hover {
+                                                       background-color: #8ac431;
+                                                       color: black;
+                                                       border: 4px solid black;
+                                                       }""")
+        pos_x = self.width() - self.decodebutton.width()
+        self.decodebutton.move(int(pos_x / 2) - 40, 160)
+        self.decodebutton.clicked.connect(self.decodebinary)
+
     def menu_toggle(self):
         self.switch_tab.emit()
 
