@@ -463,9 +463,11 @@ class VigenereTab(QWidget):
         word = tools.process_text(word)
         key = self.vigenerekey.text()
         key = tools.process_text(key)
-        key = tools.newKey(word, key)
-
-        self.result.setText(vigenereencoder(word.upper(), key.upper()))
+        if key != "":
+            key = tools.newKey(word, key)
+            self.result.setText(vigenereencoder(word.upper(), key.upper()))
+        else:
+            self.result.setText(word)
 
     def decodevigenere(self):
         from Vigenere.vigenere import vigeneredecoder
