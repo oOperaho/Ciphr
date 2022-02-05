@@ -177,14 +177,14 @@ class BinaryTab(QWidget):
         self.encodeinput.setFont(QFont("Arial", 10))
         self.encodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = (self.width() - self.encodeinput.width())
-        self.encodeinput.move(int(pos_x / 2) - 50, 130)
+        self.encodeinput.move(int(pos_x / 2) - 40, 130)
 
         self.decodeinput.setText("0")
         self.decodeinput.setGeometry(655, 280, 70, 30)
         self.decodeinput.setFont(QFont("Arial", 10))
         self.decodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = (self.width() - self.decodeinput.width())
-        self.decodeinput.move(int(pos_x / 2) + 50, 130)
+        self.decodeinput.move(int(pos_x / 2) + 40, 130)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
@@ -200,7 +200,7 @@ class BinaryTab(QWidget):
                                                border: 4px solid black;
                                                }""")
         pos_x = self.width() - self.encodebutton.width()
-        self.encodebutton.move(int(pos_x / 2) + 40, 160)
+        self.encodebutton.move(int(pos_x / 2) + 40, 165)
         self.encodebutton.clicked.connect(self.encodebinary)
 
         self.decodebutton.setText("Decode")
@@ -217,8 +217,14 @@ class BinaryTab(QWidget):
                                                        border: 4px solid black;
                                                        }""")
         pos_x = self.width() - self.decodebutton.width()
-        self.decodebutton.move(int(pos_x / 2) - 40, 160)
+        self.decodebutton.move(int(pos_x / 2) - 40, 165)
         self.decodebutton.clicked.connect(self.decodebinary)
+
+    def encodebinary(self):
+        pass
+
+    def decodebinary(self):
+        pass
 
     def menu_toggle(self):
         self.switch_tab.emit()
