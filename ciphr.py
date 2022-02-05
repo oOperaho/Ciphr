@@ -119,6 +119,7 @@ class BinaryTab(QWidget):
         self.numberVld = QIntValidator(self)
         self.encodeinput.setValidator(self.numberVld)
         self.decodeinput.setValidator(self.numberVld)
+        self.result = QtWidgets.QLabel(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
