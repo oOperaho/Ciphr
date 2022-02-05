@@ -313,10 +313,10 @@ class VigenereTab(QWidget):
         from Vigenere.vigenere import vigenereencoder
 
         word = self.vigenereinput.text()
-        word = process_text(word)
+        word = tools.process_text(word)
         key = self.vigenerekey.text()
-        key = process_text(key)
-        key = newKey(word, key)
+        key = tools.process_text(key)
+        key = tools.newKey(word, key)
 
         self.result.setText(vigenereencoder(word.upper(), key.upper()))
 
@@ -324,10 +324,10 @@ class VigenereTab(QWidget):
         from Vigenere.vigenere import vigeneredecoder
 
         word = self.vigenereinput.text()
-        word = process_text(word)
+        word = tools.process_text(word)
         key = self.vigenerekey.text()
-        key = process_text(key)
-        key = newKey(word, key)
+        key = tools.process_text(key)
+        key = tools.newKey(word, key)
 
         self.result.setText(vigeneredecoder(word.upper(), key.upper()))
 
