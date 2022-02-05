@@ -223,8 +223,12 @@ class BinaryTab(QWidget):
     def encodebinary(self):
         from Binary.binary import binaryencoder
 
+        decimal = self.encodeinput.text()
+        out = binaryencoder(decimal)
+        self.result.setText(out)
+
     def decodebinary(self):
-        from Binary.binary import binarydecoder
+        pass
 
     def menu_toggle(self):
         self.switch_tab.emit()
