@@ -13,5 +13,6 @@ def binaryencoder(n):
         out += str(i) + ""
     return int(out)
 
-#
-# def binarydecoder(n):
+
+def binarydecoder(n):
+    pass
