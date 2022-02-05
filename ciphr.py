@@ -143,6 +143,9 @@ class BinaryTab(QWidget):
                                                 }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+    def menu_toggle(self):
+        self.switch_tab.emit()
+
 
 class CaesarTab(QWidget):
 
