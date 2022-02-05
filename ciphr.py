@@ -9,6 +9,7 @@ class MainUi(QWidget):
 
     switch_tab1 = QtCore.pyqtSignal()
     switch_tab2 = QtCore.pyqtSignal()
+    switch_tab3 = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
@@ -410,8 +411,9 @@ class Remote:
         self.bin_tab = BinaryTab()
 
     def main_window(self):
-        self.mwindow.switch_tab1.connect(self.caesar_tab)
-        self.mwindow.switch_tab2.connect(self.vigenere_tab)
+        self.mwindow.switch_tab1.connect(self.bin_tab)
+        self.mwindow.switch_tab2.connect(self.caesar_tab)
+        self.mwindow.switch_tab3.connect(self.vigenere_tab)
         self.cae_tab.close()
         self.vig_tab.close()
         self.mwindow.show()
