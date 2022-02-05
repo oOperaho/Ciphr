@@ -101,6 +101,17 @@ class MainUi(QWidget):
         webbrowser.open_new(self.url)
 
 
+class BinaryTab(QWidget):
+
+    switch_tab = QtCore.pyqtSignal()
+
+    def __init__(self):
+        QWidget.__init__(self)
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
+
 class CaesarTab(QWidget):
 
     switch_tab = QtCore.pyqtSignal()
@@ -340,6 +351,7 @@ class Remote:
         self.mwindow = MainUi()
         self.cae_tab = CaesarTab()
         self.vig_tab = VigenereTab()
+        self.bin_tab = BinaryTab()
 
     def main_window(self):
         self.mwindow.switch_tab1.connect(self.caesar_tab)
