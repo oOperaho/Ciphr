@@ -19,7 +19,7 @@ def binarydecoder(n):
     x = list(string)
     out = []
     for y in range(0, len(x)):
-        if x[y] == 1:
+        if x[y] == "1":
             out.append(2 ** (len(x) - y - 1))
     return "".join(out)
 
