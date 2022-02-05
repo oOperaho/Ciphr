@@ -11,8 +11,7 @@ def binaryencoder(n):
 
     for i in l:
         out += str(i) + ""
-    return out
+    return int(out)
 
-
-def binarydecoder(n):
-
+#
+# def binarydecoder(n):
