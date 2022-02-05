@@ -1,8 +1,7 @@
 def binaryencoder(n=0):
     if n == 0:
         return 0
-    c = n
-    b = []
+    c, b = n, []
 
     while c >= 1:
         b.append(c % 2)
