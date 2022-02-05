@@ -411,7 +411,7 @@ class Remote:
         self.bin_tab = BinaryTab()
 
     def main_window(self):
-        self.mwindow.switch_tab1.connect(self.bin_tab)
+        self.mwindow.switch_tab1.connect(self.binary_tab)
         self.mwindow.switch_tab2.connect(self.caesar_tab)
         self.mwindow.switch_tab3.connect(self.vigenere_tab)
         self.cae_tab.close()
