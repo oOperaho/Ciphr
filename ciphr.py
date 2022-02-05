@@ -165,6 +165,13 @@ class BinaryTab(QWidget):
                                                 }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+        self.result.setText("")
+        self.result.setGeometry(640, 410, 170, 20)
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setFont(QFont("Helvetica", 10))
+        pos_x = self.width() - self.result.width()
+        self.result.move(int(pos_x / 2), 200)
+
         self.encodeinput.setText("0")
         self.encodeinput.setGeometry(655, 280, 70, 30)
         self.encodeinput.setFont(QFont("Arial", 10))
