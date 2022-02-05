@@ -14,4 +14,4 @@ I made this in order to study and solve some encryptions, trying to create a enc
 
 #### Something like that:
 
-![ciphr](https://user-images.githubusercontent.com/61850743/151684578-2534200b-c983-46b9-a38d-87f534a68ad6.png)
+![ciphr](https://user-images.githubusercontent.com/61850743/152662031-de2c887c-0687-4c99-80f0-dd8aa26a103e.gif)
