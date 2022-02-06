@@ -11,7 +11,7 @@ I just used a while to loop through the values of the decimal, and then append a
 .join to print the result concludes the function. 
 
 ### Dec-Bin: 12 → 12 / 2 = **6**, res: 0  |  6 / 2 = **3**, res: 0  |  3 / 2 = **1**, res: 1  |  1 / 1 = **1**  |  ← Reverse this
-### Result: 1100
+### Result: **1100**
 
 Well, the Binary → Decimal part is a little more difficult, but not complex at all. The code is even smaller than the Dec → Bin one. Given the binary, it can be simple converted
 in that way:
