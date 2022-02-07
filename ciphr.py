@@ -551,6 +551,20 @@ class MorseTab(QWidget):
                                                         }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+        self.result.setText("")
+        self.result.setGeometry(640, 410, 150, 20)
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setFont(QFont("Helvetica", 10))
+        pos_x = self.width() - self.result.width()
+        self.result.move(int(pos_x / 2), 200)
+
+        self.morseinput.setText("text")
+        self.morseinput.setGeometry(655, 280, 120, 30)
+        self.morseinput.setFont(QFont("Arial", 10))
+        self.morse.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = self.width() - self.morseinput.width()
+        self.morseinput.move(int(pos_x / 2), 80)
+
     def menu_toggle(self):
         self.switch_tab.emit()
 
