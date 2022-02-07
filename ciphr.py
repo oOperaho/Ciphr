@@ -93,6 +93,23 @@ class MainUi(QWidget):
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2), 260)
 
+        self.vig.setText("Morse")
+        self.vig.setGeometry(0, 0, 100, 40)
+        self.vig.setFont(QFont("Helvetica", 15))
+        self.vig.setStyleSheet("""QPushButton {
+                                background-color: #042c18;
+                                color: #dbf45c;
+                                border: 2px solid black;
+                                }
+                                QPushButton::hover {
+                                background-color: #8ac431;
+                                color: black;
+                                border: 4px solid black;
+                                }""")
+        self.mor.clicked.connect(self.mor_toggle)
+        pos_x = self.width() - self.mor.width()
+        self.mor.move(int(pos_x / 2), 310)
+
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
                                         background-color: #ADD45A;
