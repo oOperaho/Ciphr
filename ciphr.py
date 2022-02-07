@@ -408,6 +408,7 @@ class VigenereTab(QWidget):
         self.vigenereinput = QLineEdit(self)
         self.encodebutton = QPushButton(self)
         self.decodebutton = QPushButton(self)
+        self.copy_text = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -528,6 +529,9 @@ class VigenereTab(QWidget):
             self.result.setText(vigeneredecoder(word.upper(), key.upper()))
         else:
             self.result.setText("?")
+
+    def copy_to_clipboard(self):
+        pass
 
     def menu_toggle(self):
         self.switch_tab.emit()
