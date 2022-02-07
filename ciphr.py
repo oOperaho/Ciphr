@@ -40,7 +40,7 @@ class MainUi(QWidget):
         self.innic.setFont(QFont("Impact", 35))
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
-        self.innic.move(int(pos_x / 2), 50)
+        self.innic.move(int(pos_x / 2), 40)
 
         self.biny.setText("Binary")
         self.biny.setGeometry(0, 0, 100, 40)
@@ -57,7 +57,7 @@ class MainUi(QWidget):
                                         }""")
         self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
-        self.biny.move(int(pos_x / 2), 160)
+        self.biny.move(int(pos_x / 2), 140)
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
@@ -74,7 +74,7 @@ class MainUi(QWidget):
                                 }""")
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
-        self.cae.move(int(pos_x / 2), 210)
+        self.cae.move(int(pos_x / 2), 190)
 
         self.vig.setText("Vigenere")
         self.vig.setGeometry(0, 0, 100, 40)
@@ -91,7 +91,7 @@ class MainUi(QWidget):
                                 }""")
         self.vig.clicked.connect(self.vig_toggle)
         pos_x = self.width() - self.vig.width()
-        self.vig.move(int(pos_x / 2), 260)
+        self.vig.move(int(pos_x / 2), 240)
 
         self.mor.setText("Morse")
         self.mor.setGeometry(0, 0, 100, 40)
@@ -108,7 +108,7 @@ class MainUi(QWidget):
                                 }""")
         self.mor.clicked.connect(self.mor_toggle)
         pos_x = self.width() - self.mor.width()
-        self.mor.move(int(pos_x / 2), 310)
+        self.mor.move(int(pos_x / 2), 300)
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
