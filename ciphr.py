@@ -529,6 +529,7 @@ class MorseTab(QWidget):
         self.backbutton = QPushButton(self)
         self.result = QtWidgets.QLabel(self)
         self.morseinput = QLineEdit(self)
+        self.morsed = ""
         self.morsecrypt = QPushButton(self)
         self.copy_text = QPushButton(self)
         self.setWindowTitle("Ciphr")
