@@ -1,5 +1,4 @@
 import tools
-import clipboard as pc
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
@@ -610,7 +609,9 @@ class MorseTab(QWidget):
         self.result.setText(morsecode(word.lower()))
 
     def copy_to_clipboard(self):
-        pass
+        import clipboard as pc
+
+        pc.copy(self.result.text())
 
     def menu_toggle(self):
         self.switch_tab.emit()
