@@ -606,12 +606,13 @@ class MorseTab(QWidget):
         from Morse.morse import morsecode
 
         word = self.morseinput.text()
-        self.result.setText(morsecode(word.lower()))
+        self.morsed = morsecode(word.lower())
+        self.result.setText(self.morsed)
 
     def copy_to_clipboard(self):
         import clipboard as pc
 
-        pc.copy(self.result)
+        pc.copy(self.morsed)
 
     def menu_toggle(self):
         self.switch_tab.emit()
