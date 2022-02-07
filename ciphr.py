@@ -565,7 +565,7 @@ class MorseTab(QWidget):
         self.morseinput.setFont(QFont("Arial", 10))
         self.morseinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = self.width() - self.morseinput.width()
-        self.morseinput.move(int(pos_x / 2), 150)
+        self.morseinput.move(int(pos_x / 2), 120)
 
         self.morsecrypt.setText("Morse it")
         self.morsecrypt.setGeometry(620, 360, 70, 30)
@@ -581,7 +581,7 @@ class MorseTab(QWidget):
                                                 border: 4px solid black;
                                                 }""")
         pos_x = self.width() - self.morsecrypt.width()
-        self.morsecrypt.move(int(pos_x / 2) + 40, 160)
+        self.morsecrypt.move(int(pos_x / 2), 160)
         self.morsecrypt.clicked.connect(self.morse_code)
 
     def morse_code(self):
