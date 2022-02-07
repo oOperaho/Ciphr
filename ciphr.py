@@ -628,6 +628,7 @@ class MorseTab(QWidget):
 
         word = self.morseinput.text()
         word = tools.process_text(word)
+        word = tools.remove_spaces(word)
         self.result.setText(morsecode(word.lower()))
 
     def copy_to_clipboard(self):

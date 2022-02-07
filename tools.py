@@ -21,6 +21,11 @@ def process_text(text):
     return new_text
 
 
+def remove_spaces(text):
+    new_text = re.sub(" +", " ", text)
+    return new_text
+
+
 def process_int(num):
     new_int = re.sub("[^0-9]", "", num)
     return new_int
