@@ -607,6 +607,7 @@ class MorseTab(QWidget):
         from Morse.morse import morsecode
 
         word = self.morseinput.text()
+        word = tools.process_text(word)
         self.morsed = morsecode(word.lower())
         self.result.setText(self.morsed)
 
