@@ -486,6 +486,23 @@ class VigenereTab(QWidget):
         self.decodebutton.move(int(pos_x / 2) - 40, 160)
         self.decodebutton.clicked.connect(self.decodevigenere)
 
+        self.copy_text.setText("Copy")
+        self.copy_text.setGeometry(620, 360, 50, 25)
+        self.copy_text.setFont(QFont("Helvetica", 10))
+        self.copy_text.setStyleSheet("""QPushButton {
+                                                background-color: #042c18;
+                                                color: #dbf45c;
+                                                border: 2px solid black;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 4px solid black;
+                                                }""")
+        pos_x = self.width() - self.copy_text.width()
+        self.copy_text.move(int(pos_x / 2), 240)
+        self.copy_text.clicked.connect(self.copy_to_clipboard)
+
     def encodevigenere(self):
         from Vigenere.vigenere import vigenereencoder
 
