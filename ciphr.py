@@ -522,11 +522,13 @@ class Remote:
         self.cae_tab = CaesarTab()
         self.vig_tab = VigenereTab()
         self.bin_tab = BinaryTab()
+        self.mor_tab = MorseTab()
 
     def main_window(self):
         self.mwindow.switch_tab1.connect(self.binary_tab)
         self.mwindow.switch_tab2.connect(self.caesar_tab)
         self.mwindow.switch_tab3.connect(self.vigenere_tab)
+        self.mwindow.switch_tab4.connect(self.morse_tab())
         self.bin_tab.close()
         self.cae_tab.close()
         self.vig_tab.close()
@@ -546,6 +548,11 @@ class Remote:
         self.vig_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
         self.vig_tab.show()
+
+    def morse_tab(self):
+        self.mor_tab.switch_tab.connect(self.mwindow)
+        self.mwindow.close()
+        self.mor_tab.show()
 
 
 def display():
