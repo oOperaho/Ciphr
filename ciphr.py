@@ -589,7 +589,7 @@ class Remote:
         self.vig_tab.show()
 
     def morse_tab(self):
-        self.mor_tab.switch_tab.connect(self.mwindow)
+        self.mor_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
         self.mor_tab.show()
 
