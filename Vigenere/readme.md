@@ -20,14 +20,10 @@ If you look  at the Grid, you'll see the same result. So:
 
 ### Encode = Word{Letter} + Key{Letter} - 1
 
-You may note that this only works for some letters. If you add O with O, you'll have 30, which is greater than 26. To solve this, simply repeat the alphabet one time, and then you cann add even Z + Z, the result will exist.
+You may note that this only works for some letters. If you add O with O, you'll have 30, which is greater than 26. To solve this, the UI has a regex to provides numbers that are greater than 26.
 
 ## Decoding
 
-This part is a little bit different, because the notation changes, but it's not that hard. You just need to move between the alphabet in other way, replacing the orientation of
-the letters.
-The expression of the decode i made uses the pattern _"zyxwvutsrqponmlkjihgfedcbaabcdefghijklmnopqrstuvwxyz"_. This can be more understandable in the code, but here i'll show how to do it.
-
-You still need to use the previous formula, but replacing the -1 with +1. Then, you have to find the corresponding letter on another string, which is " zyxwvutsrqponmlkjihgfedcba" on the code. This way, you can apply the method of adding 1 to the counting without tresspassing the alphabet limit.
+This part, as well as the encode, has to use the .ord() on python to bring the right number of the character on the ASCII table. The difference here is that you'll need to subtract 26 before taking the remainder of the number on the expression.
 
 ### Decode = Word{Letter} + Key{Letter} + 1
