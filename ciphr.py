@@ -24,6 +24,7 @@ class MainUi(QWidget):
         self.biny = QPushButton(self)
         self.cae = QPushButton(self)
         self.vig = QPushButton(self)
+        self.mor = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -109,6 +110,9 @@ class MainUi(QWidget):
         pos_y = self.height() - self.ciphr_repo.height()
         margin = 15
         self.ciphr_repo.move(margin, pos_y-margin)
+
+    def mor_toggle(self):
+        self.switch_tab4.emit()
 
     def bin_toggle(self):
         self.switch_tab1.emit()
