@@ -587,7 +587,7 @@ class MorseTab(QWidget):
     def morse_code(self):
         from Morse.morse import morsecode
 
-        word = self.result.text()
+        word = self.morseinput.text()
         self.result.setText(morsecode(word.lower()))
 
     def menu_toggle(self):
