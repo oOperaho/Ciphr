@@ -567,7 +567,7 @@ class Remote:
         self.mwindow.switch_tab1.connect(self.binary_tab)
         self.mwindow.switch_tab2.connect(self.caesar_tab)
         self.mwindow.switch_tab3.connect(self.vigenere_tab)
-        self.mwindow.switch_tab4.connect(self.morse_tab())
+        self.mwindow.switch_tab4.connect(self.morse_tab)
         self.bin_tab.close()
         self.cae_tab.close()
         self.vig_tab.close()
