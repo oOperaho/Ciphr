@@ -12,7 +12,7 @@ the ciphers on my [Medium](https://medium.com/@Operaho).
 ### ✔ Binary
 ### ✔ Caesar
 ### ✔ Vigenere
-### 🔷 Morse
+### ✔ Morse
 ### ❌ Base64
 ### ❌ Z-Base32
 ### ❌ Morbit
