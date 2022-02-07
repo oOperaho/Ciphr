@@ -323,7 +323,7 @@ class CaesarTab(QWidget):
         pos_x = self.width() - self.caesarkey.width()
         self.caesarkey.move(int(pos_x / 2), 120)
 
-        self.caesarinput.setText("word")
+        self.caesarinput.setText("text")
         self.caesarinput.setGeometry(655, 280, 120, 30)
         self.caesarinput.setFont(QFont("Arial", 10))
         self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
@@ -438,7 +438,7 @@ class VigenereTab(QWidget):
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
-        self.vigenereinput.setText("word")
+        self.vigenereinput.setText("text")
         self.vigenereinput.setGeometry(655, 280, 120, 30)
         self.vigenereinput.setFont(QFont("Arial", 10))
         self.vigenereinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
