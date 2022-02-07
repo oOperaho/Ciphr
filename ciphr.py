@@ -501,7 +501,7 @@ class VigenereTab(QWidget):
                                                 border: 4px solid black;
                                                 }""")
         pos_x = self.width() - self.copy_text.width()
-        self.copy_text.move(int(pos_x / 2), 200)
+        self.copy_text.move(int(pos_x / 2), 220)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
 
     def encodevigenere(self):
