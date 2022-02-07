@@ -526,8 +526,8 @@ class MorseTab(QWidget):
         centerPoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerPoint)
 
-
-
+        self.backbutton = QPushButton(self)
+        self.result = QtWidgets.QLabel(self)
 
 
 class Remote:
