@@ -20,7 +20,7 @@ If you look  at the Grid, you'll see the same result. So:
 
 ### Encode = Word{Letter} + Key{Letter} - 1
 
-You may note that this only works for some letters. If you add O with O, you'll have 30, which is greater than 26. To solve this, simply repeat the alphabet one time, and then you cann add even Z + Z, the result will exist.
+You may note that this only works for some letters. If you add O with O, you'll have 30, which is greater than 26. To solve this, the UI has a regex to provides numbers that are greater than 26.
 
 ## Decoding
 
