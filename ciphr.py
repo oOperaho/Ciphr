@@ -531,7 +531,7 @@ class VigenereTab(QWidget):
             self.result.setText("?")
 
     def copy_to_clipboard(self):
-        pass
+        tools.copy_to_pc(self.result.text())
 
     def menu_toggle(self):
         self.switch_tab.emit()
@@ -550,7 +550,6 @@ class MorseTab(QWidget):
         self.backbutton = QPushButton(self)
         self.result = QtWidgets.QLabel(self)
         self.morseinput = QLineEdit(self)
-        self.morsed = ""
         self.morsecrypt = QPushButton(self)
         self.copy_text = QPushButton(self)
         self.setWindowTitle("Ciphr")
@@ -629,13 +628,10 @@ class MorseTab(QWidget):
 
         word = self.morseinput.text()
         word = tools.process_text(word)
-        self.morsed = morsecode(word.lower())
-        self.result.setText(self.morsed)
+        self.result.setText(morsecode(word.lower()))
 
     def copy_to_clipboard(self):
-        import clipboard as pc
-
-        pc.copy(self.morsed)
+        tools.copy_to_pc(self.result.text())
 
     def menu_toggle(self):
         self.switch_tab.emit()

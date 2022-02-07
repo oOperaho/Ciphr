@@ -1,4 +1,9 @@
 import re
+import clipboard as pc
+
+
+def copy_to_pc(w):
+    pc.copy(w)
 
 
 def newKey(w, k):
