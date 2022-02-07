@@ -111,9 +111,6 @@ class MainUi(QWidget):
         margin = 15
         self.ciphr_repo.move(margin, pos_y-margin)
 
-    def mor_toggle(self):
-        self.switch_tab4.emit()
-
     def bin_toggle(self):
         self.switch_tab1.emit()
 
@@ -122,6 +119,9 @@ class MainUi(QWidget):
 
     def vig_toggle(self):
         self.switch_tab3.emit()
+
+    def mor_toggle(self):
+        self.switch_tab4.emit()
 
     def open_repo(self):
         import webbrowser
