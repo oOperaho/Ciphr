@@ -93,10 +93,10 @@ class MainUi(QWidget):
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2), 260)
 
-        self.vig.setText("Morse")
-        self.vig.setGeometry(0, 0, 100, 40)
-        self.vig.setFont(QFont("Helvetica", 15))
-        self.vig.setStyleSheet("""QPushButton {
+        self.mor.setText("Morse")
+        self.mor.setGeometry(0, 0, 100, 40)
+        self.mor.setFont(QFont("Helvetica", 15))
+        self.mor.setStyleSheet("""QPushButton {
                                 background-color: #042c18;
                                 color: #dbf45c;
                                 border: 2px solid black;
