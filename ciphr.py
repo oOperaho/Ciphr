@@ -611,7 +611,7 @@ class MorseTab(QWidget):
     def copy_to_clipboard(self):
         import clipboard as pc
 
-        pc.copy(self.result.text())
+        pc.copy(self.result)
 
     def menu_toggle(self):
         self.switch_tab.emit()
