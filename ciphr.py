@@ -530,6 +530,7 @@ class MorseTab(QWidget):
         self.result = QtWidgets.QLabel(self)
         self.morseinput = QLineEdit(self)
         self.morsecrypt = QPushButton(self)
+        self.copy_text = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -583,6 +584,20 @@ class MorseTab(QWidget):
         pos_x = self.width() - self.morsecrypt.width()
         self.morsecrypt.move(int(pos_x / 2), 160)
         self.morsecrypt.clicked.connect(self.morse_code)
+
+        self.copy_text.setText("Copy")
+        self.copy_text.setGeometry(620, 360, 70, 30)
+        self.copy_text.setFont(QFont("Helvetica", 12))
+        self.copy_text.setStyleSheet("""QPushButton {
+                                                background-color: #042c18;
+                                                color: #dbf45c;
+                                                border: 2px solid black;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 4px solid black;
+                                                }""")
 
     def morse_code(self):
         from Morse.morse import morsecode
