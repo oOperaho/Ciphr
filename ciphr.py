@@ -516,6 +516,20 @@ class VigenereTab(QWidget):
         self.switch_tab.emit()
 
 
+class MorseTab(QWidget):
+
+    switch_tab = QtCore.pyqtSignal()
+
+    def __init__(self):
+        QWidget.__init__(self)
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
+
+
+
+
 class Remote:
     def __init__(self):
         self.mwindow = MainUi()
