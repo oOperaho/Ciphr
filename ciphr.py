@@ -316,19 +316,19 @@ class CaesarTab(QWidget):
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
-        self.caesarkey.setText("3")
-        self.caesarkey.setGeometry(685, 320, 50, 30)
-        self.caesarkey.setFont(QFont("Arial", 8))
-        self.caesarkey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        pos_x = self.width() - self.caesarkey.width()
-        self.caesarkey.move(int(pos_x / 2), 120)
-
         self.caesarinput.setText("text")
         self.caesarinput.setGeometry(655, 280, 120, 30)
         self.caesarinput.setFont(QFont("Arial", 10))
         self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = self.width() - self.caesarinput.width()
         self.caesarinput.move(int(pos_x / 2), 80)
+
+        self.caesarkey.setText("3")
+        self.caesarkey.setGeometry(685, 320, 50, 30)
+        self.caesarkey.setFont(QFont("Arial", 8))
+        self.caesarkey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        pos_x = self.width() - self.caesarkey.width()
+        self.caesarkey.move(int(pos_x / 2), 120)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
