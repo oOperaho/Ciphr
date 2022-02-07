@@ -567,7 +567,7 @@ class MorseTab(QWidget):
         pos_x = self.width() - self.morseinput.width()
         self.morseinput.move(int(pos_x / 2), 150)
 
-        self.morsecrypt.setText("Encode")
+        self.morsecrypt.setText("Morse it")
         self.morsecrypt.setGeometry(620, 360, 70, 30)
         self.morsecrypt.setFont(QFont("Helvetica", 11))
         self.morsecrypt.setStyleSheet("""QPushButton {
@@ -586,6 +586,9 @@ class MorseTab(QWidget):
 
     def morse_code(self):
         from Morse.morse import morsecode
+
+        word = self.result.text()
+        self.result.setText(morsecode(word.lower()))
 
 
     def menu_toggle(self):
