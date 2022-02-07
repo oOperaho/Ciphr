@@ -10,6 +10,7 @@ class MainUi(QWidget):
     switch_tab1 = QtCore.pyqtSignal()
     switch_tab2 = QtCore.pyqtSignal()
     switch_tab3 = QtCore.pyqtSignal()
+    switch_tab4 = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
