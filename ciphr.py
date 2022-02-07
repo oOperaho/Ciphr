@@ -590,7 +590,6 @@ class MorseTab(QWidget):
         word = self.result.text()
         self.result.setText(morsecode(word.lower()))
 
-
     def menu_toggle(self):
         self.switch_tab.emit()
 
