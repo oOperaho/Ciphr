@@ -528,7 +528,7 @@ class MorseTab(QWidget):
 
         self.backbutton = QPushButton(self)
         self.result = QtWidgets.QLabel(self)
-        self.morseinput = QPushButton(self)
+        self.morseinput = QLineEdit(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -562,7 +562,7 @@ class MorseTab(QWidget):
         self.morseinput.setText("text")
         self.morseinput.setGeometry(655, 280, 120, 30)
         self.morseinput.setFont(QFont("Arial", 10))
-        self.morse.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.morseinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = self.width() - self.morseinput.width()
         self.morseinput.move(int(pos_x / 2), 80)
 
