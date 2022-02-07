@@ -551,6 +551,9 @@ class MorseTab(QWidget):
                                                         }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
+    def menu_toggle(self):
+        self.switch_tab.emit()
+
 
 class Remote:
     def __init__(self):
