@@ -586,8 +586,8 @@ class MorseTab(QWidget):
         self.morsecrypt.clicked.connect(self.morse_code)
 
         self.copy_text.setText("Copy")
-        self.copy_text.setGeometry(620, 360, 70, 30)
-        self.copy_text.setFont(QFont("Helvetica", 12))
+        self.copy_text.setGeometry(620, 360, 50, 25)
+        self.copy_text.setFont(QFont("Helvetica", 10))
         self.copy_text.setStyleSheet("""QPushButton {
                                                 background-color: #042c18;
                                                 color: #dbf45c;
@@ -599,7 +599,7 @@ class MorseTab(QWidget):
                                                 border: 4px solid black;
                                                 }""")
         pos_x = self.width() - self.copy_text.width()
-        self.copy_text.move(int(pos_x / 2), 160)
+        self.copy_text.move(int(pos_x / 2), 240)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
 
     def morse_code(self):
