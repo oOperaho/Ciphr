@@ -7,6 +7,9 @@ I made this in order to study python and solve some encryptions, trying to creat
 Each folder here contains a readme that explains the respective cipher, and how you can decode/encode/convert something with it. I can also make a more detailed text about
 the ciphers on my [Medium](https://medium.com/@Operaho).
 
+✔ → Code and UI done
+❌ → Not in production yet
+
 ### ✔ Binary
 ### ✔ Caesar
 ### ✔ Vigenere
