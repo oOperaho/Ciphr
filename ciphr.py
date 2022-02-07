@@ -571,6 +571,7 @@ class Remote:
         self.bin_tab.close()
         self.cae_tab.close()
         self.vig_tab.close()
+        self.mor_tab.close()
         self.mwindow.show()
 
     def binary_tab(self):
