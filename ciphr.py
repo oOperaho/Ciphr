@@ -529,6 +529,7 @@ class MorseTab(QWidget):
         self.backbutton = QPushButton(self)
         self.result = QtWidgets.QLabel(self)
         self.morseinput = QLineEdit(self)
+        self.morsecrypt = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -553,18 +554,39 @@ class MorseTab(QWidget):
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
-        self.result.setGeometry(640, 410, 150, 20)
+        self.result.setGeometry(640, 410, 150, 30)
         self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        self.result.setFont(QFont("Helvetica", 10))
+        self.result.setFont(QFont("Helvetica", 12))
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.morseinput.setText("text")
-        self.morseinput.setGeometry(655, 280, 120, 30)
+        self.morseinput.setGeometry(655, 280, 150, 30)
         self.morseinput.setFont(QFont("Arial", 10))
         self.morseinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
         pos_x = self.width() - self.morseinput.width()
         self.morseinput.move(int(pos_x / 2), 150)
+
+        self.morsecrypt.setText("Encode")
+        self.morsecrypt.setGeometry(620, 360, 70, 30)
+        self.morsecrypt.setFont(QFont("Helvetica", 11))
+        self.morsecrypt.setStyleSheet("""QPushButton {
+                                                background-color: #042c18;
+                                                color: #dbf45c;
+                                                border: 2px solid black;
+                                                }
+                                                QPushButton::hover {
+                                                background-color: #8ac431;
+                                                color: black;
+                                                border: 4px solid black;
+                                                }""")
+        pos_x = self.width() - self.morsecrypt.width()
+        self.morsecrypt.move(int(pos_x / 2) + 40, 160)
+        self.morsecrypt.clicked.connect(self.morse_code)
+
+    def morse_code(self):
+        from Morse.morse import morsecode
+
 
     def menu_toggle(self):
         self.switch_tab.emit()
