@@ -13,9 +13,9 @@ the ciphers on my [Medium](https://medium.com/@Operaho).
 ### ✔ Caesar
 ### ✔ Vigenere
 ### 🔷 Morse
-### Base64
-### Z-Base32
-### Morbit
+### ❌ Base64
+### ❌ Z-Base32
+### ❌ Morbit
 
 
 #### Something like that:
