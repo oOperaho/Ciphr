@@ -2,7 +2,7 @@ import tools
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
 class MainUi(QWidget):
@@ -160,6 +160,10 @@ class BinaryTab(QWidget):
         self.encodeinput = QLineEdit(self)
         self.decodebutton = QPushButton(self)
         self.decodeinput = QLineEdit(self)
+        self.copied_label = QtWidgets.QLabel(self)
+        self.fadeeffect = QGraphicsOpacityEffect(self)
+        self.copied_label.setGraphicsEffect(self.fadeeffect)
+        self.fadeanimation = QtCore.QPropertyAnimation(self.fadeeffect, b"opacity")
         # self.numberVld = QIntValidator(self)
         # self.encodeinput.setValidator(self.numberVld)
         # self.decodeinput.setValidator(self.numberVld)
@@ -242,6 +246,23 @@ class BinaryTab(QWidget):
         self.decodebutton.move(int(pos_x / 2) + 40, 165)
         self.decodebutton.clicked.connect(self.decodebinary)
 
+        self.copy_text.setText("Copy")
+        self.copy_text.setGeometry(620, 360, 50, 25)
+        self.copy_text.setFont(QFont("Helvetica", 10))
+        self.copy_text.setStyleSheet("""QPushButton {
+                                                        background-color: #042c18;
+                                                        color: #dbf45c;
+                                                        border: 2px solid black;
+                                                        }
+                                                        QPushButton::hover {
+                                                        background-color: #8ac431;
+                                                        color: black;
+                                                        border: 4px solid black;
+                                                        }""")
+        pos_x = self.width() - self.copy_text.width()
+        self.copy_text.move(int(pos_x / 2), 230)
+        self.copy_text.clicked.connect(self.copy_to_clipboard)
+
     def encodebinary(self):
         from Binary.binary import binaryencoder
 
@@ -263,6 +284,9 @@ class BinaryTab(QWidget):
             self.result.setText(str(out))
         else:
             self.result.setText("?")
+
+    def copy_to_clipboard(self):
+        tools.copy_to_pc(self.result.text())
 
     def menu_toggle(self):
         self.switch_tab.emit()
