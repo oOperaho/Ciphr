@@ -160,6 +160,7 @@ class BinaryTab(QWidget):
         self.encodeinput = QLineEdit(self)
         self.decodebutton = QPushButton(self)
         self.decodeinput = QLineEdit(self)
+        self.copy_text = QPushButton(self)
         self.copied_label = QtWidgets.QLabel(self)
         self.fadeeffect = QGraphicsOpacityEffect(self)
         self.copied_label.setGraphicsEffect(self.fadeeffect)
