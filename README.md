@@ -22,3 +22,5 @@ the ciphers on my [Medium](https://medium.com/@Operaho).
 
 ![ciphr](https://user-images.githubusercontent.com/61850743/152662086-b17c908f-2aaa-47f9-a322-bf042a0962d2.gif)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
