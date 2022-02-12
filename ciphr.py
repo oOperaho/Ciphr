@@ -11,6 +11,7 @@ class MainUi(QWidget):
     switch_tab2 = QtCore.pyqtSignal()
     switch_tab3 = QtCore.pyqtSignal()
     switch_tab4 = QtCore.pyqtSignal()
+    switch_tab5 = QtCore.pyqtSignal()
 
     def __init__(self):
         QWidget.__init__(self)
@@ -25,6 +26,7 @@ class MainUi(QWidget):
         self.cae = QPushButton(self)
         self.vig = QPushButton(self)
         self.mor = QPushButton(self)
+        self.hil = QPushButton(self)
         self.setWindowTitle("Ciphr")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
@@ -110,6 +112,23 @@ class MainUi(QWidget):
         pos_x = self.width() - self.mor.width()
         self.mor.move(int(pos_x / 2), 290)
 
+        self.hil.setText("Hill")
+        self.hil.setGeometry(0, 0, 100, 40)
+        self.hil.setFont(QFont("Helvetica", 15))
+        self.hil.setStyleSheet("""QPushButton {
+                                background-color: #042c18;
+                                color: #dbf45c;
+                                border: 2px solid black;
+                                }
+                                QPushButton::hover {
+                                background-color: #8ac431;
+                                color: black;
+                                border: 4px solid black;
+                                }""")
+        self.hil.clicked.connect(self.hil_toggle)
+        pos_x = self.width() - self.hil.width()
+        self.hil.move(int(pos_x / 2), 290)
+
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
                                         background-color: #ADD45A;
@@ -139,6 +158,9 @@ class MainUi(QWidget):
 
     def mor_toggle(self):
         self.switch_tab4.emit()
+
+    def hil_toggle(self):
+        self.switch_tab5.emit()
 
     def open_repo(self):
         import webbrowser
