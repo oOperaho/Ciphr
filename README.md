@@ -18,7 +18,7 @@ the ciphers on my [Medium](https://medium.com/@Operaho).
 ### 🔷 Base64
 ### ❌ Z-Base32
 ### ❌ Morbit
-### 🔷 Hill
+### ❌ Hill
 
 
 #### Something like that:
