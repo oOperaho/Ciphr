@@ -127,7 +127,7 @@ class MainUi(QWidget):
                                 }""")
         self.hil.clicked.connect(self.hil_toggle)
         pos_x = self.width() - self.hil.width()
-        self.hil.move(int(pos_x / 2) - 60, 230)
+        self.hil.move(int(pos_x / 2) - 60, 260)
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setStyleSheet("""QPushButton {
