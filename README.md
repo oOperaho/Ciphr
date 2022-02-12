@@ -15,10 +15,10 @@ the ciphers on my [Medium](https://medium.com/@Operaho).
 ### ✔ Caesar
 ### ✔ Vigenere
 ### ✔ Morse
-### 🔷 Base64
+### ❌ Base64
 ### ❌ Z-Base32
 ### ❌ Morbit
-### ❌ Hill
+### 🔷 Hill
 
 
 #### Something like that:
