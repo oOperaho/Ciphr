@@ -752,7 +752,6 @@ class HillTab(QWidget):
         self.switch_tab.emit()
 
 
-
 class Remote:
     def __init__(self):
         self.mwindow = MainUi()
