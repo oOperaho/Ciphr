@@ -59,7 +59,7 @@ class MainUi(QWidget):
                                         }""")
         self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
-        self.biny.move(int(pos_x / 2), 140)
+        self.biny.move(int(pos_x / 2) - 60, 140)
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
@@ -76,7 +76,7 @@ class MainUi(QWidget):
                                 }""")
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
-        self.cae.move(int(pos_x / 2), 190)
+        self.cae.move(int(pos_x / 2)  + 60, 140)
 
         self.vig.setText("Vigenere")
         self.vig.setGeometry(0, 0, 100, 40)
