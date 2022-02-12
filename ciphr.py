@@ -724,6 +724,32 @@ class HillTab(QWidget):
         self.move(qtRectangle.topLeft())
         self.setStyleSheet("background-color: #052321;")
         self.setFixedSize(self.size())
+        self.hill_window()
+
+    def hill_window(self):
+        self.backbutton.setText("←")
+        self.backbutton.setGeometry(10, 10, 60, 35)
+        self.backbutton.setFont(QFont("Helvetica", 15))
+        self.backbutton.setStyleSheet("""QPushButton {
+                                                                background-color: #052321;
+                                                                color: #70ff03;
+                                                                }
+                                                                QPushButton::hover {
+                                                                background-color: #8ac431;
+                                                                color: black;
+                                                                border: 3px solid black;
+                                                                }""")
+        self.backbutton.clicked.connect(self.menu_toggle)
+
+        self.result.setText("")
+        self.result.setGeometry(640, 410, 150, 30)
+        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setFont(QFont("Helvetica", 12))
+        pos_x = self.width() - self.result.width()
+        self.result.move(int(pos_x / 2), 200)
+
+    def menu_toggle(self):
+        self.switch_tab.emit()
 
 
 
