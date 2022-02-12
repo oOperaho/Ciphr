@@ -706,6 +706,21 @@ class MorseTab(QWidget):
         self.switch_tab.emit()
 
 
+class HillTab(QWidget):
+
+    switch_tab = QtCore.pyqtSignal()
+
+    def __init__(self):
+        QWidget.__init__(self)
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+
+        self.backbutton = QPushButton(self)
+        self.result = QtWidgets.QLabel(self)
+
+
+
 class Remote:
     def __init__(self):
         self.mwindow = MainUi()
