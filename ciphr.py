@@ -795,7 +795,7 @@ class Remote:
         self.mor_tab.show()
 
     def hill_tab(self):
-        self.mwindow.switch_tab.connect(self.main_window)
+        self.hil_tab.switch_tab.connect(self.main_window)
         self.mwindow.close()
         self.hil_tab.show()
 
