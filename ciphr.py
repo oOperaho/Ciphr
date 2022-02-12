@@ -76,7 +76,7 @@ class MainUi(QWidget):
                                 }""")
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
-        self.cae.move(int(pos_x / 2)  + 60, 140)
+        self.cae.move(int(pos_x / 2) + 60, 140)
 
         self.vig.setText("Vigenere")
         self.vig.setGeometry(0, 0, 100, 40)
@@ -93,7 +93,7 @@ class MainUi(QWidget):
                                 }""")
         self.vig.clicked.connect(self.vig_toggle)
         pos_x = self.width() - self.vig.width()
-        self.vig.move(int(pos_x / 2), 240)
+        self.vig.move(int(pos_x / 2) - 60, 200)
 
         self.mor.setText("Morse")
         self.mor.setGeometry(0, 0, 100, 40)
@@ -110,7 +110,7 @@ class MainUi(QWidget):
                                 }""")
         self.mor.clicked.connect(self.mor_toggle)
         pos_x = self.width() - self.mor.width()
-        self.mor.move(int(pos_x / 2), 290)
+        self.mor.move(int(pos_x / 2) + 60, 200)
 
         self.hil.setText("Hill")
         self.hil.setGeometry(0, 0, 100, 40)
