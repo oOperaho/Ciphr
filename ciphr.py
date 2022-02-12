@@ -718,6 +718,12 @@ class HillTab(QWidget):
 
         self.backbutton = QPushButton(self)
         self.result = QtWidgets.QLabel(self)
+        self.setWindowTitle("Ciphr")
+        self.setWindowIcon(QIcon("icons/cr.png"))
+        self.setGeometry(0, 0, 520, 400)
+        self.move(qtRectangle.topLeft())
+        self.setStyleSheet("background-color: #052321;")
+        self.setFixedSize(self.size())
 
 
 
