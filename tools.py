@@ -21,6 +21,11 @@ def process_text(text):
     return new_text
 
 
+def process_morse(text):
+    reformat = re.sub("[^a-zA-Z0-9\s]", "", text)
+    return reformat
+
+
 def remove_spaces(text):
     new_text = re.sub(" +", " ", text)
     return new_text
