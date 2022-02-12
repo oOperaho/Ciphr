@@ -39,7 +39,7 @@ class MainUi(QWidget):
         self.innic.setText("• CIPHR •")
         self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setGeometry(0, 0, 190, 100)
-        self.innic.setFont(QFont("Impact", 35))
+        self.innic.setFont(QFont("Times New Roman", 35))
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
         self.innic.move(int(pos_x / 2), 40)
