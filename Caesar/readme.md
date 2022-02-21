@@ -8,6 +8,6 @@ For example, if you want to hide the word "orange", and you choose 3 as a key, y
 ## Encode = Word{Letter} + Key{Letter}
 ## Decode = Word{Letter} - Key{Letter}
 
-In this case, the word "orange" is now "rudqjh".
+In this case, the word "orange" is now "rudqjh". !(https://medium.com/@Operaho/make-a-caesars-cipher-with-python-8958ffa1e90d)[I made a article about this cipher, in specific.]
 
 ![image](https://user-images.githubusercontent.com/61850743/150044956-31495810-6a10-4d07-8743-cb946abd5119.png)
