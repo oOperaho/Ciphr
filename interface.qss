@@ -13,7 +13,7 @@ QLabel#innic
 	font-size: 40px;
 }
 
-QPushButton
+QPushButton#FirstBtt
 {
 	background-color: #042c18;
 	color: #dbf45c;
@@ -22,7 +22,7 @@ QPushButton
 	font-size: 20px;
 }
 
-QPushButton:hover
+QPushButton#FirstBtt:hover
 {
 	background-color: #ADD45A;
 	color: black;

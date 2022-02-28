@@ -36,6 +36,8 @@ class MainUi(QWidget):
         self.menu()
 
     def menu(self):
+        keyname = "FirstBtt"
+
         self.innic.setText("• CIPHR •")
         self.innic.setGeometry(0, 0, 190, 100)
         self.innic.setObjectName("innic")
@@ -44,30 +46,35 @@ class MainUi(QWidget):
         self.innic.move(int(pos_x / 2), 40)
 
         self.biny.setText("Binary")
+        self.biny.setObjectName(keyname)
         self.biny.setGeometry(0, 0, 100, 40)
         self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
         self.biny.move(int(pos_x / 2) - 60, 140)
 
         self.cae.setText("Caesar")
+        self.cae.setObjectName(keyname)
         self.cae.setGeometry(0, 0, 100, 40)
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2) + 60, 140)
 
         self.vig.setText("Vigenere")
+        self.vig.setObjectName(keyname)
         self.vig.setGeometry(0, 0, 100, 40)
         self.vig.clicked.connect(self.vig_toggle)
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2) - 60, 200)
 
         self.mor.setText("Morse")
+        self.mor.setObjectName(keyname)
         self.mor.setGeometry(0, 0, 100, 40)
         self.mor.clicked.connect(self.mor_toggle)
         pos_x = self.width() - self.mor.width()
         self.mor.move(int(pos_x / 2) + 60, 200)
 
         self.hil.setText("Hill")
+        self.hil.setObjectName(keyname)
         self.hil.setGeometry(0, 0, 100, 40)
         self.hil.clicked.connect(self.hil_toggle)
         pos_x = self.width() - self.hil.width()
