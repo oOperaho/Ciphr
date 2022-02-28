@@ -28,10 +28,10 @@ class MainUi(QWidget):
         self.mor = QPushButton(self)
         self.hil = QPushButton(self)
         self.setWindowTitle("Ciphr")
+        self.setObjectName("Menu")
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
         self.setFixedSize(self.size())  # disable resizing
         self.menu()
 
@@ -53,7 +53,6 @@ class MainUi(QWidget):
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
         self.cae.setObjectName("cae")
-
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2) + 60, 140)
