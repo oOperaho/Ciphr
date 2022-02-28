@@ -5,7 +5,7 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
-backbutton_obj, menu_obj, result_obj = "backbutton", "Menu", "result"
+objects_list = ["Menu", "Result", "Backbutton"]
 
 class MainUi(QWidget):
 
@@ -141,27 +141,25 @@ class BinaryTab(QWidget):
         self.backbutton.setText("←")
         self.backbutton.setObjectName(backbutton_obj)
         self.backbutton.setGeometry(10, 10, 60, 35)
-        self.backbutton.setFont(QFont("Helvetica", 15))
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 170, 20)
         self.result.setObjectName(result_obj)
-        self.result.setFont(QFont("Helvetica", 10))
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.encodeinput.setText("0")
         self.encodeinput.setGeometry(655, 280, 70, 30)
         self.encodeinput.setFont(QFont("Arial", 10))
-        self.encodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.encodeinput.setObjectName()
         pos_x = (self.width() - self.encodeinput.width())
         self.encodeinput.move(int(pos_x / 2) - 40, 130)
 
         self.decodeinput.setText("0")
         self.decodeinput.setGeometry(655, 280, 70, 30)
         self.decodeinput.setFont(QFont("Arial", 10))
-        self.decodeinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.decodeinput.setObjectName()
         pos_x = (self.width() - self.decodeinput.width())
         self.decodeinput.move(int(pos_x / 2) + 40, 130)
 

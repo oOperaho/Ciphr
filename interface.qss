@@ -13,7 +13,7 @@ QLabel#innic
 	font-size: 40px;
 }
 
-QLabel#result
+QLabel#Result
 {
 	background-color: #042c18; 
 	color: #dbf45c; 
@@ -54,7 +54,7 @@ QPushButton#repo:hover
 	background-image: url(icons/gh.png);
 }
 
-QPushButton#backbutton
+QPushButton#Backbutton
 {
 	background-color: #052321;
     color: #70ff03;
@@ -62,7 +62,7 @@ QPushButton#backbutton
     font-size: 25px;
 }
 
-QPushButton#backbutton:hover
+QPushButton#Backbutton:hover
 {
 	background-color: #ADD45A;
     color: black;
