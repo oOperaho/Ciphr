@@ -4,7 +4,7 @@ QWidget#Menu
 	border: 3px solid black;
 }
 
-QLabel#innic
+QLabel#Innic
 {
 	background-color: #052321;
 	color: #ADD45A;
@@ -38,7 +38,7 @@ QPushButton#FirstBtt:hover
 	border: 4px solid black;
 }
 
-QPushButton#repo
+QPushButton#Repo
 {
 	background-color: #ADD45A;
     border: 1px solid black;
@@ -46,7 +46,7 @@ QPushButton#repo
 	background-image: url(icons/gh.png);
 }
 
-QPushButton#repo:hover
+QPushButton#Repo:hover
 {
 	background-color: #ADD45A;
 	border: 1px solid black;
@@ -67,4 +67,11 @@ QPushButton#Backbutton:hover
 	background-color: #ADD45A;
     color: black;
     border: 3px solid black;
+}
+
+QLineEdit#Inputs
+{
+	background-color: #042c18; 
+	color: #dbf45c; 
+	border: 2px solid black;
 }

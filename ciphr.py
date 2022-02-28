@@ -5,7 +5,7 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
-objects_list = ["Menu", "Result", "Backbutton"]
+obj_list = ["Menu", "Result", "Backbutton", "Code"]
 
 class MainUi(QWidget):
 
@@ -30,7 +30,7 @@ class MainUi(QWidget):
         self.mor = QPushButton(self)
         self.hil = QPushButton(self)
         self.setWindowTitle("Ciphr")
-        self.setObjectName(menu_obj)
+        self.setObjectName(obj_list[0])
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
@@ -42,7 +42,7 @@ class MainUi(QWidget):
 
         self.innic.setText("• CIPHR •")
         self.innic.setGeometry(0, 0, 190, 100)
-        self.innic.setObjectName("innic")
+        self.innic.setObjectName("Innic")
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
         self.innic.move(int(pos_x / 2), 40)
@@ -83,7 +83,7 @@ class MainUi(QWidget):
         self.hil.move(int(pos_x / 2) - 60, 260)
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
-        self.ciphr_repo.setObjectName("repo")
+        self.ciphr_repo.setObjectName("Repo")
         self.ciphr_repo.clicked.connect(self.open_repo)
         pos_y = self.height() - self.ciphr_repo.height()
         margin = 15
@@ -133,33 +133,33 @@ class BinaryTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setObjectName(menu_obj)
+        self.setObjectName(obj_list[0])
         self.setFixedSize(self.size())
         self.binary_window()
 
     def binary_window(self):
         self.backbutton.setText("←")
-        self.backbutton.setObjectName(backbutton_obj)
+        self.backbutton.setObjectName(obj_list[2])
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 170, 20)
-        self.result.setObjectName(result_obj)
+        self.result.setObjectName(obj_list[1])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.encodeinput.setText("0")
         self.encodeinput.setGeometry(655, 280, 70, 30)
         self.encodeinput.setFont(QFont("Arial", 10))
-        self.encodeinput.setObjectName()
+        self.encodeinput.setObjectName(obj_list[3])
         pos_x = (self.width() - self.encodeinput.width())
         self.encodeinput.move(int(pos_x / 2) - 40, 130)
 
         self.decodeinput.setText("0")
         self.decodeinput.setGeometry(655, 280, 70, 30)
         self.decodeinput.setFont(QFont("Arial", 10))
-        self.decodeinput.setObjectName()
+        self.decodeinput.setObjectName(obj_list[3])
         pos_x = (self.width() - self.decodeinput.width())
         self.decodeinput.move(int(pos_x / 2) + 40, 130)
 
