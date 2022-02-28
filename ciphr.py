@@ -177,17 +177,7 @@ class BinaryTab(QWidget):
 
         self.copy_text.setText("Copy")
         self.copy_text.setGeometry(620, 360, 50, 25)
-        self.copy_text.setFont(QFont("Helvetica", 10))
-        self.copy_text.setStyleSheet("""QPushButton {
-                                                        background-color: #042c18;
-                                                        color: #dbf45c;
-                                                        border: 2px solid black;
-                                                        }
-                                                        QPushButton::hover {
-                                                        background-color: #8ac431;
-                                                        color: black;
-                                                        border: 4px solid black;
-                                                        }""")
+        self.copy_text.setObjectName(obj_list[5])                                     
         pos_x = self.width() - self.copy_text.width()
         self.copy_text.move(int(pos_x / 2), 230)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
@@ -244,7 +234,7 @@ class CaesarTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
+        self.setObjectName(obj_list[0])
         self.setFixedSize(self.size())
         self.caesar_window()
 
@@ -252,85 +242,44 @@ class CaesarTab(QWidget):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setStyleSheet("""QPushButton {
-                                        background-color: #052321;
-                                        color: #70ff03;
-                                        }
-                                        QPushButton::hover {
-                                        background-color: #8ac431;
-                                        color: black;
-                                        border: 3px solid black;
-                                        }""")
+        self.backbutton.setObjectName(obj_list[2])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        self.result.setFont(QFont("Helvetica", 10))
+        self.result.setObjectName(obj_list[1])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.caesarinput.setText("text")
         self.caesarinput.setGeometry(655, 280, 120, 30)
-        self.caesarinput.setFont(QFont("Arial", 10))
-        self.caesarinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.caesarinput.setObjectName(obj_list[3])
         pos_x = self.width() - self.caesarinput.width()
         self.caesarinput.move(int(pos_x / 2), 80)
 
         self.caesarkey.setText("3")
         self.caesarkey.setGeometry(685, 320, 50, 30)
-        self.caesarkey.setFont(QFont("Arial", 8))
-        self.caesarkey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.caesarkey.setObjectName(obj_list[3])
         pos_x = self.width() - self.caesarkey.width()
         self.caesarkey.move(int(pos_x / 2), 120)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
-        self.encodebutton.setFont(QFont("Helvetica", 11))
-        self.encodebutton.setStyleSheet("""QPushButton {
-                                        background-color: #042c18;
-                                        color: #dbf45c;
-                                        border: 2px solid black;
-                                        }
-                                        QPushButton::hover {
-                                        background-color: #8ac431;
-                                        color: black;
-                                        border: 4px solid black;
-                                        }""")
+        self.encodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.encodebutton.width()
         self.encodebutton.move(int(pos_x / 2) - 40, 160)
         self.encodebutton.clicked.connect(self.encodecaesar)
 
         self.decodebutton.setText("Decode")
         self.decodebutton.setGeometry(720, 360, 70, 30)
-        self.decodebutton.setFont(QFont("Helvetica", 11))
-        self.decodebutton.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.decodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.decodebutton.width()
         self.decodebutton.move(int(pos_x / 2) + 40, 160)
         self.decodebutton.clicked.connect(self.decodecaesar)
 
         self.copy_text.setText("Copy")
         self.copy_text.setGeometry(620, 360, 50, 25)
-        self.copy_text.setFont(QFont("Helvetica", 10))
-        self.copy_text.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.copy_text.setObjectName(obj_list[5])
         pos_x = self.width() - self.copy_text.width()
         self.copy_text.move(int(pos_x / 2), 230)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
@@ -387,23 +336,14 @@ class VigenereTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
+        self.setObjectName(obj_list[0])
         self.setFixedSize(self.size())
         self.vigenere_window()
 
     def vigenere_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
-        self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setStyleSheet("""QPushButton {
-                                                background-color: #052321;
-                                                color: #70ff03;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 3px solid black;
-                                                }""")
+        self.backbutton.setObjectName(obj_list[2])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
