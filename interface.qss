@@ -1,13 +1,23 @@
-QPushButton 
+QWidget#innic
+{
+	background-color: #052321;
+	color: #ADD45A;
+	font: Times New Roman;
+	font-weight; bold;
+}
+
+QPushButton#cae
 {
 	background-color: #042c18;
 	color: #dbf45c;
 	border: 2px solid black;
+	font: Helvetica;
+	font-weight: bold;
 }
 
-QPushButton::hover 
+QPushButton#cae:hover
 {
-	background-color: #8ac431;
 	color: black;
+	background-color: green;
 	border: 4px solid black;
 }

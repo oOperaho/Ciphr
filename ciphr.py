@@ -37,9 +37,8 @@ class MainUi(QWidget):
 
     def menu(self):
         self.innic.setText("• CIPHR •")
-        self.innic.setStyleSheet("color: #ADD45A;")
         self.innic.setGeometry(0, 0, 190, 100)
-        self.innic.setFont(QFont("Times New Roman", 35))
+        self.innic.setObjectName("innic")
         self.innic.setAlignment(Qt.AlignCenter)
         pos_x = self.width() - self.innic.width()
         self.innic.move(int(pos_x / 2), 40)
@@ -53,7 +52,8 @@ class MainUi(QWidget):
 
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
-        self.cae.setFont(QFont("Helvetica", 15))
+        self.cae.setObjectName("cae")
+
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2) + 60, 140)
