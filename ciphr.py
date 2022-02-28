@@ -81,18 +81,8 @@ class MainUi(QWidget):
         self.hil.move(int(pos_x / 2) - 60, 260)
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
-        self.ciphr_repo.setStyleSheet("""QPushButton {
-                                        background-color: #ADD45A;
-                                        border: 1px solid black;
-                                        border-radius: 5;
-                                        background-image: url(icons/gh.png);
-                                        }
-                                        QPushButton::hover {
-                                        background-color: #ADD45A;
-                                        border: 1px solid black;
-                                        border-radius: 10;
-                                        background-image: url(icons/gh.png);
-                                        }""")
+        self.ciphr_repo.setObjectName("repo")
+
         self.ciphr_repo.clicked.connect(self.open_repo)
         pos_y = self.height() - self.ciphr_repo.height()
         margin = 15
@@ -133,7 +123,7 @@ class BinaryTab(QWidget):
         self.encodeinput = QLineEdit(self)
         self.decodebutton = QPushButton(self)
         self.decodeinput = QLineEdit(self)
-        self.copy_text = QPushButton(self)
+        self.copy_text = QPushButton(self)                                                                                                                                                                                                                                                      
         # self.numberVld = QIntValidator(self)
         # self.encodeinput.setValidator(self.numberVld)
         # self.decodeinput.setValidator(self.numberVld)
