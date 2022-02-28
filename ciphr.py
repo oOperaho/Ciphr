@@ -5,7 +5,7 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
-obj_list = ["Menu", "Result", "Backbutton", "Code"]
+obj_list = ["Menu", "Result", "Backbutton", "Inputs", "Crypt", "Copy"]
 
 class MainUi(QWidget):
 
@@ -151,48 +151,26 @@ class BinaryTab(QWidget):
 
         self.encodeinput.setText("0")
         self.encodeinput.setGeometry(655, 280, 70, 30)
-        self.encodeinput.setFont(QFont("Arial", 10))
         self.encodeinput.setObjectName(obj_list[3])
         pos_x = (self.width() - self.encodeinput.width())
         self.encodeinput.move(int(pos_x / 2) - 40, 130)
 
         self.decodeinput.setText("0")
         self.decodeinput.setGeometry(655, 280, 70, 30)
-        self.decodeinput.setFont(QFont("Arial", 10))
         self.decodeinput.setObjectName(obj_list[3])
         pos_x = (self.width() - self.decodeinput.width())
         self.decodeinput.move(int(pos_x / 2) + 40, 130)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
-        self.encodebutton.setFont(QFont("Helvetica", 11))
-        self.encodebutton.setStyleSheet("""QPushButton {
-                                               background-color: #042c18;
-                                               color: #dbf45c;
-                                               border: 2px solid black;
-                                               }
-                                               QPushButton::hover {
-                                               background-color: #8ac431;
-                                               color: black;
-                                               border: 4px solid black;
-                                               }""")
+        self.encodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.encodebutton.width()
         self.encodebutton.move(int(pos_x / 2) - 40, 165)
         self.encodebutton.clicked.connect(self.encodebinary)
 
         self.decodebutton.setText("Decode")
         self.decodebutton.setGeometry(720, 360, 70, 30)
-        self.decodebutton.setFont(QFont("Helvetica", 11))
-        self.decodebutton.setStyleSheet("""QPushButton {
-                                                       background-color: #042c18;
-                                                       color: #dbf45c;
-                                                       border: 2px solid black;
-                                                       }
-                                                       QPushButton::hover {
-                                                       background-color: #8ac431;
-                                                       color: black;
-                                                       border: 4px solid black;
-                                                       }""")
+        self.decodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.decodebutton.width()
         self.decodebutton.move(int(pos_x / 2) + 40, 165)
         self.decodebutton.clicked.connect(self.decodebinary)
