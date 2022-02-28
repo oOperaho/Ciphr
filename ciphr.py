@@ -753,6 +753,10 @@ class Remote:
 def display():
     import sys
     w = QApplication(sys.argv)
+    Interface = open("interface.qss", "r")
+    with Interface:
+        qss = Interface.read()
+        w.setStyleSheet(qss)
     w.setStyle("Breeze")
     ui = Remote()
     ui.main_window()
