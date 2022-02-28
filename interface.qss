@@ -1,6 +1,7 @@
 QWidget#Menu
 {
 	background-color: #052321;
+	border: 3px solid black;
 }
 
 QLabel#innic
@@ -9,18 +10,19 @@ QLabel#innic
 	color: #ADD45A;
 	font: Times New Roman;
 	font-weight; bold;
+	font-size: 40px;
 }
 
-QPushButton#cae
+QPushButton
 {
 	background-color: #042c18;
 	color: #dbf45c;
 	border: 2px solid black;
 	font: Helvetica;
-	font-weight: bold;
+	font-size: 20px;
 }
 
-QPushButton#cae:hover
+QPushButton:hover
 {
 	background-color: #ADD45A;
 	color: black;
