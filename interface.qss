@@ -13,6 +13,15 @@ QLabel#innic
 	font-size: 40px;
 }
 
+QLabel#result
+{
+	background-color: #042c18; 
+	color: #dbf45c; 
+	border: 2px solid black;
+	font: Helvetica;
+	font-size: 15px;
+}
+
 QPushButton#FirstBtt
 {
 	background-color: #042c18;
@@ -49,6 +58,8 @@ QPushButton#backbutton
 {
 	background-color: #052321;
     color: #70ff03;
+    font: Helvetica;
+    font-size: 25px;
 }
 
 QPushButton#backbutton:hover

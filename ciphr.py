@@ -5,7 +5,7 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
-backbutton_object = "backbutton"
+backbutton_obj, menu_obj, result_obj = "backbutton", "Menu", "result"
 
 class MainUi(QWidget):
 
@@ -30,7 +30,7 @@ class MainUi(QWidget):
         self.mor = QPushButton(self)
         self.hil = QPushButton(self)
         self.setWindowTitle("Ciphr")
-        self.setObjectName("Menu")
+        self.setObjectName(menu_obj)
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
@@ -133,20 +133,20 @@ class BinaryTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
+        self.setObjectName(menu_obj)
         self.setFixedSize(self.size())
         self.binary_window()
 
     def binary_window(self):
         self.backbutton.setText("←")
-        self.backbutton.setObjectName(backbutton_object)
+        self.backbutton.setObjectName(backbutton_obj)
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 170, 20)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.result.setObjectName(result_obj)
         self.result.setFont(QFont("Helvetica", 10))
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
