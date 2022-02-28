@@ -5,7 +5,7 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
-obj_list = ["Menu", "Result", "Backbutton", "Inputs", "Crypt", "Copy"]
+obj_list = ["Menu", "Backbutton", "Result", "Inputs", "Crypt", "Copy"]
 
 class MainUi(QWidget):
 
@@ -139,13 +139,13 @@ class BinaryTab(QWidget):
 
     def binary_window(self):
         self.backbutton.setText("←")
-        self.backbutton.setObjectName(obj_list[2])
+        self.backbutton.setObjectName(obj_list[1])
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 170, 20)
-        self.result.setObjectName(obj_list[1])
+        self.result.setObjectName(obj_list[2])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
@@ -242,12 +242,12 @@ class CaesarTab(QWidget):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setObjectName(obj_list[2])
+        self.backbutton.setObjectName(obj_list[1])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setObjectName(obj_list[1])
+        self.result.setObjectName(obj_list[2])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
@@ -343,77 +343,44 @@ class VigenereTab(QWidget):
     def vigenere_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
-        self.backbutton.setObjectName(obj_list[2])
+        self.backbutton.setObjectName(obj_list[1])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 20)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        self.result.setFont(QFont("Helvetica", 10))
+        self.result.setObjectName(obj_list[2])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.vigenereinput.setText("text")
         self.vigenereinput.setGeometry(655, 280, 120, 30)
-        self.vigenereinput.setFont(QFont("Arial", 10))
-        self.vigenereinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.vigenereinput.setObjectName(obj_list[3])
         pos_x = self.width() - self.vigenereinput.width()
         self.vigenereinput.move(int(pos_x / 2), 80)
 
         self.vigenerekey.setText("key")
         self.vigenerekey.setGeometry(685, 320, 120, 30)
-        self.vigenerekey.setFont(QFont("Arial", 10))
-        self.vigenerekey.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.vigenerekey.setObjectName(obj_list[3])
         pos_x = self.width() - self.vigenerekey.width()
         self.vigenerekey.move(int(pos_x / 2), 120)
 
         self.encodebutton.setText("Encode")
         self.encodebutton.setGeometry(620, 360, 70, 30)
-        self.encodebutton.setFont(QFont("Helvetica", 11))
-        self.encodebutton.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.encodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.encodebutton.width()
         self.encodebutton.move(int(pos_x / 2) + 40, 160)
         self.encodebutton.clicked.connect(self.encodevigenere)
 
         self.decodebutton.setText("Decode")
         self.decodebutton.setGeometry(720, 360, 70, 30)
-        self.decodebutton.setFont(QFont("Helvetica", 11))
-        self.decodebutton.setStyleSheet("""QPushButton {
-                                                        background-color: #042c18;
-                                                        color: #dbf45c;
-                                                        border: 2px solid black;
-                                                        }
-                                                        QPushButton::hover {
-                                                        background-color: #8ac431;
-                                                        color: black;
-                                                        border: 4px solid black;
-                                                        }""")
+        self.decodebutton.setObjectName(obj_list[4])
         pos_x = self.width() - self.decodebutton.width()
         self.decodebutton.move(int(pos_x / 2) - 40, 160)
         self.decodebutton.clicked.connect(self.decodevigenere)
 
         self.copy_text.setText("Copy")
         self.copy_text.setGeometry(620, 360, 50, 25)
-        self.copy_text.setFont(QFont("Helvetica", 10))
-        self.copy_text.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.copy_text.setObjectName(obj_list[5])
         pos_x = self.width() - self.copy_text.width()
         self.copy_text.move(int(pos_x / 2), 230)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
@@ -470,69 +437,38 @@ class MorseTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
+        self.setObjectName(obj_list[0])
         self.setFixedSize(self.size())
         self.morse_window()
 
     def morse_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
-        self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setStyleSheet("""QPushButton {
-                                                        background-color: #052321;
-                                                        color: #70ff03;
-                                                        }
-                                                        QPushButton::hover {
-                                                        background-color: #8ac431;
-                                                        color: black;
-                                                        border: 3px solid black;
-                                                        }""")
+        self.backbutton.setObjectName(obj_list[1])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 30)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        self.result.setFont(QFont("Helvetica", 12))
+        self.result.setObjectName(obj_list[2])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
         self.morseinput.setText("text")
         self.morseinput.setGeometry(655, 280, 150, 30)
-        self.morseinput.setFont(QFont("Arial", 10))
-        self.morseinput.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
+        self.morseinput.setObjectName(obj_list[3])
         pos_x = self.width() - self.morseinput.width()
         self.morseinput.move(int(pos_x / 2), 120)
 
         self.morsecrypt.setText("Morse it")
         self.morsecrypt.setGeometry(620, 360, 70, 30)
-        self.morsecrypt.setFont(QFont("Helvetica", 11))
-        self.morsecrypt.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.morsecrypt.setObjectName(obj_list[4])
         pos_x = self.width() - self.morsecrypt.width()
         self.morsecrypt.move(int(pos_x / 2), 160)
         self.morsecrypt.clicked.connect(self.morse_code)
 
         self.copy_text.setText("Copy")
         self.copy_text.setGeometry(620, 360, 50, 25)
-        self.copy_text.setFont(QFont("Helvetica", 10))
-        self.copy_text.setStyleSheet("""QPushButton {
-                                                background-color: #042c18;
-                                                color: #dbf45c;
-                                                border: 2px solid black;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 4px solid black;
-                                                }""")
+        self.copy_text.setObjectName(obj_list[5])
         pos_x = self.width() - self.copy_text.width()
         self.copy_text.move(int(pos_x / 2), 240)
         self.copy_text.clicked.connect(self.copy_to_clipboard)
@@ -568,29 +504,19 @@ class HillTab(QWidget):
         self.setWindowIcon(QIcon("icons/cr.png"))
         self.setGeometry(0, 0, 520, 400)
         self.move(qtRectangle.topLeft())
-        self.setStyleSheet("background-color: #052321;")
+        self.setObjectName(obj_list[0])
         self.setFixedSize(self.size())
         self.hill_window()
 
     def hill_window(self):
         self.backbutton.setText("←")
         self.backbutton.setGeometry(10, 10, 60, 35)
-        self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setStyleSheet("""QPushButton {
-                                                                background-color: #052321;
-                                                                color: #70ff03;
-                                                                }
-                                                                QPushButton::hover {
-                                                                background-color: #8ac431;
-                                                                color: black;
-                                                                border: 3px solid black;
-                                                                }""")
+        self.backbutton.setObjectName(obj_list[1])
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")
         self.result.setGeometry(640, 410, 150, 30)
-        self.result.setStyleSheet("""background-color: #042c18; color: #dbf45c; border: 2px solid black;""")
-        self.result.setFont(QFont("Helvetica", 12))
+        self.result.setObjectName(obj_list[2])
         pos_x = self.width() - self.result.width()
         self.result.move(int(pos_x / 2), 200)
 
