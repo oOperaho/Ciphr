@@ -5,6 +5,8 @@ from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
 
 
+backbutton_object = "backbutton"
+
 class MainUi(QWidget):
 
     switch_tab1 = QtCore.pyqtSignal()
@@ -82,7 +84,6 @@ class MainUi(QWidget):
 
         self.ciphr_repo.setGeometry(10, 800, 20, 20)
         self.ciphr_repo.setObjectName("repo")
-
         self.ciphr_repo.clicked.connect(self.open_repo)
         pos_y = self.height() - self.ciphr_repo.height()
         margin = 15
@@ -138,17 +139,9 @@ class BinaryTab(QWidget):
 
     def binary_window(self):
         self.backbutton.setText("←")
+        self.backbutton.setObjectName(backbutton_object)
         self.backbutton.setGeometry(10, 10, 60, 35)
         self.backbutton.setFont(QFont("Helvetica", 15))
-        self.backbutton.setStyleSheet("""QPushButton {
-                                                background-color: #052321;
-                                                color: #70ff03;
-                                                }
-                                                QPushButton::hover {
-                                                background-color: #8ac431;
-                                                color: black;
-                                                border: 3px solid black;
-                                                }""")
         self.backbutton.clicked.connect(self.menu_toggle)
 
         self.result.setText("")

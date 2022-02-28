@@ -44,3 +44,16 @@ QPushButton#repo:hover
 	border-radius: 10;
 	background-image: url(icons/gh.png);
 }
+
+QPushButton#backbutton
+{
+	background-color: #052321;
+    color: #70ff03;
+}
+
+QPushButton#backbutton:hover
+{
+	background-color: #ADD45A;
+    color: black;
+    border: 3px solid black;
+}
