@@ -47,16 +47,6 @@ class MainUi(QWidget):
         self.biny.setText("Binary")
         self.biny.setGeometry(0, 0, 100, 40)
         self.biny.setFont(QFont("Helvetica", 15))
-        self.biny.setStyleSheet("""QPushButton {
-                                        background-color: #042c18; 
-                                        color: #dbf45c; 
-                                        border: 2px solid black;
-                                        }
-                                        QPushButton::hover {
-                                        background-color: #8ac431;
-                                        color: black;
-                                        border: 4px solid black;
-                                        }""")
         self.biny.clicked.connect(self.bin_toggle)
         pos_x = self.width() - self.biny.width()
         self.biny.move(int(pos_x / 2) - 60, 140)
@@ -64,16 +54,6 @@ class MainUi(QWidget):
         self.cae.setText("Caesar")
         self.cae.setGeometry(0, 0, 100, 40)
         self.cae.setFont(QFont("Helvetica", 15))
-        self.cae.setStyleSheet("""QPushButton {
-                                background-color: #042c18; 
-                                color: #dbf45c; 
-                                border: 2px solid black;
-                                }
-                                QPushButton::hover {
-                                background-color: #8ac431;
-                                color: black;
-                                border: 4px solid black;
-                                }""")
         self.cae.clicked.connect(self.cae_toggle)
         pos_x = self.width() - self.cae.width()
         self.cae.move(int(pos_x / 2) + 60, 140)
@@ -81,16 +61,6 @@ class MainUi(QWidget):
         self.vig.setText("Vigenere")
         self.vig.setGeometry(0, 0, 100, 40)
         self.vig.setFont(QFont("Helvetica", 15))
-        self.vig.setStyleSheet("""QPushButton {
-                                background-color: #042c18;
-                                color: #dbf45c;
-                                border: 2px solid black;
-                                }
-                                QPushButton::hover {
-                                background-color: #8ac431;
-                                color: black;
-                                border: 4px solid black;
-                                }""")
         self.vig.clicked.connect(self.vig_toggle)
         pos_x = self.width() - self.vig.width()
         self.vig.move(int(pos_x / 2) - 60, 200)
@@ -98,16 +68,6 @@ class MainUi(QWidget):
         self.mor.setText("Morse")
         self.mor.setGeometry(0, 0, 100, 40)
         self.mor.setFont(QFont("Helvetica", 15))
-        self.mor.setStyleSheet("""QPushButton {
-                                background-color: #042c18;
-                                color: #dbf45c;
-                                border: 2px solid black;
-                                }
-                                QPushButton::hover {
-                                background-color: #8ac431;
-                                color: black;
-                                border: 4px solid black;
-                                }""")
         self.mor.clicked.connect(self.mor_toggle)
         pos_x = self.width() - self.mor.width()
         self.mor.move(int(pos_x / 2) + 60, 200)
@@ -115,16 +75,6 @@ class MainUi(QWidget):
         self.hil.setText("Hill")
         self.hil.setGeometry(0, 0, 100, 40)
         self.hil.setFont(QFont("Helvetica", 15))
-        self.hil.setStyleSheet("""QPushButton {
-                                background-color: #042c18;
-                                color: #dbf45c;
-                                border: 2px solid black;
-                                }
-                                QPushButton::hover {
-                                background-color: #8ac431;
-                                color: black;
-                                border: 4px solid black;
-                                }""")
         self.hil.clicked.connect(self.hil_toggle)
         pos_x = self.width() - self.hil.width()
         self.hil.move(int(pos_x / 2) - 60, 260)
