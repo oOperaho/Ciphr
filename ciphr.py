@@ -2,10 +2,11 @@ import tools
 from PyQt5.QtCore import Qt
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtGui import QFont, QIcon
-from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget, QGraphicsOpacityEffect
+from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QLineEdit, QDesktopWidget
 
 
 obj_list = ["Menu", "Backbutton", "Result", "Inputs", "Crypt", "Copy"]
+
 
 class MainUi(QWidget):
 
